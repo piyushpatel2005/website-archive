@@ -1,4 +1,10 @@
 baseURL: 'http://example.org/'
 languageCode: 'en-us'
-title: 'My New Hugo Site'
+title: 'Piyush Patel Website'
 theme: 'LoveItCustom'
+params:
+  title: "Piyush Blogs"
+  description: "Sample description"
+  header:
+    title: 
+      name: "Piyush Patel"
