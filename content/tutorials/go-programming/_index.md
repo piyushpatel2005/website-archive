@@ -1,7 +1,6 @@
 ---
-
+title: "Go Programming"
 ---
-
 Go Programming Home
 ===================
 
