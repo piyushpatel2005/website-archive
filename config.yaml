@@ -2,9 +2,21 @@ baseURL: 'http://example.org/'
 languageCode: 'en-us'
 title: 'Piyush Patel Website'
 theme: 'LoveItCustom'
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
 params:
   title: "Piyush Blogs"
   description: "Sample description"
+  defaultTheme: "auto"
   header:
     title: 
       name: "Piyush Patel"
+  page:
+    code:
+      copy: true
+      maxShownLines: 50
