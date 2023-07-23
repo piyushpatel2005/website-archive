@@ -6,7 +6,7 @@ draft: false
 
 In this short tutorial, we will see the purpose of learning Go language. Here, we talk about very brief history, usage of Go programming and where it's being used.
 <!--more-->
-# Overview of Go Programming Language
+## Overview of Go Programming Language
 
 Let's understand a brief history of go programming language. Go was developed at Google and the version 1 of the language came out in the year 2012. Google wanted something that could run at very high speed with machine level code but is still readable unlike C or C++. So, they came out with Go.
 

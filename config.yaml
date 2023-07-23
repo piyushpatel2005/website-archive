@@ -19,7 +19,7 @@ menu:
       post: ""
     - weight: 20
       identifier: "about"
-      name: "About Us Now"
+      name: "About Us"
       url: "/about"
       pre: ""
       post: ""
@@ -33,7 +33,7 @@ params:
   page:
     toc: 
       enable: true
-      keepStatic: false
+      # keepStatic: true
       auto: true
     code:
       copy: true

@@ -1,0 +1,24 @@
+$global-font-size: 1.20rem !default;
+$terminal-prompt: "$ ";
+
+.archive .single-title {
+    text-align: center;
+}
+
+.single .single-title {
+    font-size: 2em;
+}
+
+.special {
+    .single-title, .single-subtitle {
+      text-align: center;
+    }
+}
+
+.language-bash .line:first-child .cl::before {
+    content: $terminal-prompt;
+}
+
+.language-shell .line:first-child .cl::before {
+    content: $terminal-prompt;
+}
