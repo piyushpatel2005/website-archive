@@ -10,3 +10,10 @@
 ```shell
 hugo new site ./
 ```
+
+Add a theme and start writing using 
+
+```shell
+hugo new about/index.md
+```
+

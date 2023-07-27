@@ -11,13 +11,19 @@ markup:
     noClasses: false
 menu:
   main:
-    - weight: 10
+    - weight: 20
+      identifier: "posts"
+      name: "Blog"
+      url: "/posts"
+      pre: ""
+      post: ""
+    - weight: 20
       identifier: "tutorials"
       name: "Tutorials"
       url: "/tutorials"
       pre: ""
       post: ""
-    - weight: 20
+    - weight: 30
       identifier: "about"
       name: "About Us"
       url: "/about"
@@ -38,3 +44,6 @@ params:
     code:
       copy: true
       maxShownLines: 50
+Permalinks:
+  posts: blog/:slugorfilename
+  tutorials: :sections[1:]/:slugorfilename
