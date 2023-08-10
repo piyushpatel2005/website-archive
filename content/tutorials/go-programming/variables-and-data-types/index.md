@@ -163,6 +163,20 @@ go run main.go
 ./main.go:8:9: cannot use "Hello" (untyped string constant) as int value in assignment
 ```
 
+## Constants
+
+Constants are like variables however once initialized, the value cannot be modified. These are declared using `const` keyword. We cannot declare a constant without initializing a value, i.e. the value cannot be assigned later or zero value does not apply to constants. Also, shorthand variable assignment does not apply to constants. They will usually have a global scope. The basic syntax for constants look like this.
+
+```go
+const <constant_name> <datatype> = <value>
+```
+
+For example, 
+
+```go
+const PI float32 = 3.14159
+```
+
 ## Data Types
 
 As we saw in examples above that we have data types for primitive types like integer, boolean, float and we also have string data types. We also have some collection data types which help store group of data. This is how most of the programs use computer memory. These collection data types are created with these primitive types. Below table shows the data type and their range.
