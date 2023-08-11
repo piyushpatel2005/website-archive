@@ -1,13 +1,13 @@
 # Use the golang:1.13 base image for building Hugo
-FROM golang:1.13 AS builder
+FROM golang:1.20 AS builder
 
 # VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
 ARG VARIANT=hugo_extended
 # VERSION can be either 'latest' or a specific version number
 ARG VERSION=0.115.1
 
-RUN sed -i 's/debian.map.fastlydns.net/deb.debian.org/' /etc/apt/sources.list && \
-    apt-get update && apt-get install -y ca-certificates openssl git curl nodejs npm && \
+# RUN sed -i 's/debian.map.fastlydns.net/deb.debian.org/' /etc/apt/sources.list && \
+RUN apt-get update && apt-get install -y ca-certificates openssl git curl nodejs npm && \
     rm -rf /var/lib/apt/lists/* && \
     case ${VERSION} in \
     latest) \
@@ -17,7 +17,7 @@ RUN sed -i 's/debian.map.fastlydns.net/deb.debian.org/' /etc/apt/sources.list &&
     wget -O ${VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-64bit.tar.gz && \
     tar xf ${VERSION}.tar.gz && \
     mv hugo* /usr/bin/hugo && \
-    go get github.com/yaegashi/muslstack && \
+    go install github.com/yaegashi/muslstack@latest && \
     muslstack -s 0x800000 /usr/bin/hugo
 
 
