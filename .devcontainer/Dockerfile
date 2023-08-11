@@ -21,6 +21,6 @@ RUN apt update -y && \
 # Required for hugo_extended
 # RUN apk add --update --no-cache libc6-compat
 # COPY --from=0 hugo /usr/bin
-EXPOSE 1313
+# EXPOSE 1313
 # WORKDIR /src
 # CMD ["/usr/bin/hugo server"]
