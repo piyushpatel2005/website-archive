@@ -95,6 +95,12 @@ print(type(c))
 
 It types keyword `class` and the type of the variable. This can become useful when debugging code.
 
+### None value
+
+Python also has a special value called `None`. This is used to define absense of any value for an object. This is similar to `null` in other programming languages. We can assign `None` value to any variable and this value has a type `NoneType`. Few key points about this value are:
+- `None` is not exactly same as `False` even though in [conditional check](../conditionals/#conditionals-with-none) it acts like a falsy value.
+- Similarly, `None` is not `0` nor an empty string.
+
 ### Python Collections.
 
 On top of these base data types, we also have collection data types. In general, when we want to store data, we will be storing data as a collection. For example, a collection for user grades, a collection of employee records, a collection of course names, etc. In order to store that we have three main types of collections.
