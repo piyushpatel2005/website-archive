@@ -10,7 +10,7 @@
 			// Update VERSION to pick a specific hugo version.
 			// Example versions: latest, 0.73.0, 0,71.1
 			// Rebuild the container if it already exists to update.
-			"VERSION": "0.115.1"
+			"VERSION": "0.117.0"
 		}
 	},
 	// Set *default* container specific settings.json values on container create.
@@ -19,13 +19,10 @@
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"bungcip.better-toml",
 		"davidanson.vscode-markdownlint",
 		"eliostruyf.vscode-front-matter-beta",
-		"figma.figma-vscode-extension",
 		"anseki.vscode-color",
-		"mrmlnc.vscode-scss",
-		"rozpuszczalny.vscode-redmine"
+		"mrmlnc.vscode-scss"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
