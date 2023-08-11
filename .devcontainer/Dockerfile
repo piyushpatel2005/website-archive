@@ -1,4 +1,5 @@
-FROM golang:1.13-alpine
+FROM golang:1.21-alpine
+# FROM mcr.microsoft.com/devcontainers/universal:2
 
 # VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
 ARG VARIANT=hugo_extended
@@ -15,7 +16,11 @@ RUN apk add --update --no-cache ca-certificates openssl git curl && \
     tar xf ${VERSION}.tar.gz && \
     mv hugo* /usr/bin/hugo && \
     go get github.com/yaegashi/muslstack && \
-    muslstack -s 0x800000 /usr/bin/hugo
+    muslstack -s 0x800000 /usr/bin/hugo && \
+    apk add --no-cache \
+    gcompat \
+    libc6-compat && \
+    ln -s /lib/libc.so.6 /usr/lib/libresolv.so.2
 
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-3.12
 # Required for hugo_extended
