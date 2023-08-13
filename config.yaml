@@ -44,6 +44,8 @@ params:
     code:
       copy: true
       maxShownLines: 50
+    math: 
+      enable: true # enable LaTeX
 Permalinks:
   posts: blog/:slugorfilename
   tutorials: :sections[1:]/:slugorfilename
