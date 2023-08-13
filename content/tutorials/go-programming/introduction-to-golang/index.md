@@ -42,3 +42,7 @@ Go is used for:
 - Network programming
 - System level programming at lower level
 - Cloud native tools development
+
+## Conclusion
+
+In this lesson, we looked at the reasons why we should learn Go programming language. We also saw various usages of Golang and some of the large scale companies using this modern language.
