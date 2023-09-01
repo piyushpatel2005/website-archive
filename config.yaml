@@ -2,6 +2,9 @@ baseURL: 'http://example.org/'
 languageCode: 'en-us'
 title: 'Piyush Patel Website'
 theme: 'LoveItCustom'
+author:
+  name: Piyush Patel
+  homepage: https://piyushpatel2005.github.io
 markup:
   highlight:
     codeFences: true
