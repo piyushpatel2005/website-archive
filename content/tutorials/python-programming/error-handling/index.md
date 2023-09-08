@@ -156,6 +156,31 @@ except ValueError:
     print("Please, enter number and not string data.")
 ```
 
+We can also handle multiple errors in single `except` block like below snippet.
+
+```python
+try:
+    result = int(num1) / int(num2)
+    print("Result of these two operations is " + str(result))
+
+except {ZeroDivisionError, TypeError, ValueError}:
+    print("One of ZeroDivisionError, TypeError or ValueError occurred.")
+```
+
+Some of the most common types of built-in exceptions are listed below.
+
+- `Exception`: This is base class for most of the Errors in Python.
+- `ValueError`: This occcurs when a function receives an argument of unexpected type. This also occurs with operators in Python.
+- `SyntaxError`: occurs when we have incorrect Python language syntax.
+- `IndentationError`: occurs when we have inconsistent indentation in our source file.
+- `ZeroDivisionError`: this is when we try to divide or try to find a module with denominator as zero.
+- `NameError`: This occurs when a variable or name is not found in source file. This could be because we missed declaring a variable or if we miss importing a function or value.
+- `ImportError`: This happens during importing a function or a class from a module. This could also be because that function or class is not defined in the module or we are missing a package installation. More details on this can be found in [Modules and Packages](../modules-and-packages/).
+- `KeyError`: This is raised when a key is not found in dictionary.
+- `OSError`: This occurs when a system level error occurs.
+- `IndexError`: is raised when a sequence (list or tuple) is out of range in indexing or slicing.
+- `IOError`: occurs when IO operation fails. This could be due to give filename not being available at a given location, but can also be due to other reason like file being  closed.
+
 **Output:**
 
 ```output{ lineNos=false }    
@@ -165,57 +190,25 @@ Second number: 2
 Result of these two operations is 0.5
 ```
 
-## `raise` keyword
-
-If there are situations where we want to throw error without any actual error, then in that case we can use `raise` keyword. This may be useful to throw an error when our code cannot respond to certain user inputs. Below simple code snippet throws `ValueError` with custom error message.
+There is also `else` block with `try...catch` but that's not used so much and it causes more confusion if ever used. So, below code is just to know the syntax incase you ever encounter it.
 
 ```python
-raise ValueError("This is wrong")
-```
-
-Let's say we have a use-case where we can add two numbers only when they are greater than `0` else we cannot perform operation, then we would like to check the user input and if it's negative, then we would like to `raise` an error.
-
-**Example:**
-
-```python
-num1 = input("Enter first number: ")
-num2 = input("Enter second number: ")
-
-num1 = int(num1)
-num2 = int(num2)
-
-if num1 < 0 or num2 < 0:
-    raise ValueError("Numbers must be greater than zero.")
-print("Sum: " + str(num1 + num2))
+lst = [1, 2, 3]
+try:
+    print(lst[2])
+except IndexError:
+    print("IndexError occurred.")
+else:
+    print(lst[len(lst) - 1])
 ```
 
 **Output:**
 
-```shell
-python main.py
-Enter first number: 1
-Enter second number: -1
-```
-
 ```output{ lineNos=false }
-ValueError: Numbers must be greater than zero.
+IndexError occurred.
 ```
 
-I can use a `try...except` block to handle this case.
-
-```python
-num1 = input("Enter first number: ")
-num2 = input("Enter second number: ")
-
-try:
-    num1 = int(num1)
-    num2 = int(num2)
-    if num1 < 0 or num2 < 0:
-        raise ValueError("Numbers must be greater than zero.")
-    print("Sum: " + str(num1 + num2))
-except:
-    print("Something went wrong")
-```
+If error occurs, it executes only `except` block, but if error does not occur in `try` block, it will also execute `else` block after finishing `try` block.
 
 ## `finally` keyword
 
@@ -277,4 +270,56 @@ Executing this code again, produces below output
 Calculating sum
 Sum: 7
 Closing a file
+```
+
+## `raise` keyword
+
+If there are situations where we want to throw error without any actual error, then in that case we can use `raise` keyword. This may be useful to throw an error when our code cannot respond to certain user inputs. Below simple code snippet throws `ValueError` with custom error message.
+
+```python
+raise ValueError("This is wrong")
+```
+
+Let's say we have a use-case where we can add two numbers only when they are greater than `0` else we cannot perform operation, then we would like to check the user input and if it's negative, then we would like to `raise` an error.
+
+**Example:**
+
+```python
+num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+
+num1 = int(num1)
+num2 = int(num2)
+
+if num1 < 0 or num2 < 0:
+    raise ValueError("Numbers must be greater than zero.")
+print("Sum: " + str(num1 + num2))
+```
+
+**Output:**
+
+```shell
+python main.py
+Enter first number: 1
+Enter second number: -1
+```
+
+```output{ lineNos=false }
+ValueError: Numbers must be greater than zero.
+```
+
+I can use a `try...except` block to handle this case.
+
+```python
+num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+
+try:
+    num1 = int(num1)
+    num2 = int(num2)
+    if num1 < 0 or num2 < 0:
+        raise ValueError("Numbers must be greater than zero.")
+    print("Sum: " + str(num1 + num2))
+except:
+    print("Something went wrong")
 ```
