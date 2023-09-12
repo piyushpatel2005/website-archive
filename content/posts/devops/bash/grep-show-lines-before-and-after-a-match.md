@@ -3,7 +3,7 @@ title: "Grep Show Lines Before and After a Match"
 date: 2023-08-24T07:38:45Z
 draft: false
 tags: ["Bash", "Shell"]
-categories: ["Devops", "Automation"]
+categories: ["DevOps"]
 ---
 
 Grep is one of the most powerful utility we have with UNIX Shell. This is used for various purposes like finding a text in a file or finding files containing certain text in a path. This comes very handy when scanning through large log files for specific information.

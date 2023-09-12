@@ -22,3 +22,7 @@ $terminal-prompt: "$ ";
 .language-shell .line:first-child .cl::before {
     content: $terminal-prompt;
 }
+
+.language-bash .cl::before {
+    content: $terminal-prompt;
+}
