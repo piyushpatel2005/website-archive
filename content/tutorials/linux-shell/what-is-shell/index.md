@@ -76,15 +76,15 @@ echo $SHELL
 If you have any other shell as default shell and you wish to change it, then we can use `chsh` command to change login shell. For example, we have `sh` shell.
 
 ```bash{ lineNos=false }
-ls /bin/sh
-chsh -s /bin/sh
+$ ls /bin/sh
+$ chsh -s /bin/sh
 ```
 
 ## Getting Help
 
 1. In `bash`, we can get help for a specific command using their manual pages. These are the official documentations for the command. We can view those using `man <command>`. For example, to view information about the command `chsh`, we can use below command.
 
-```bash{ lineNos=false }
+```shell{ lineNos=false }
 man chsh
 ```
 

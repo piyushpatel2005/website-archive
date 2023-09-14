@@ -11,7 +11,7 @@ Bash commands are used to interact with the system. Whether we want to write a f
 ## General Syntax 
 The general syntax for bash commands look like below. Terminal and console are the terms used interchangeably.
 
-```shell
+```bash{ lineNos=false }
 command [-options] [arguments]
 ```
 
@@ -19,7 +19,7 @@ Here, `command` is the command name that we want to execute. Each command may ha
 
 Below command shows an example of options with arguments. Here is `-l` option shows directory listing in long format. Argument `/home/admin/Downloads/` makes sure that we are getting directory list for this specific directory in the system.
 
-```bash
+```bash{ .show-prompt lineNos=false }
 ls -l /home/admin/Downloads/
 ```
 
@@ -52,6 +52,7 @@ The `ls` command is used to list files and directories in the current working di
     - List files and directories in a specific directory: `ls /path/to/directory`
     - List files with detailed information (including permissions, size, modification date): `ls -l`
     - List all files (including hidden files): `ls -a`
+    - List all files and directories of all child directories: `ls -R`
 
 ### `cd`: Change Directory
 The `cd` command is used to change the current working directory. When we open the terminal for the first time, by default, it starts in the user home directory. This is usually under the path `/home/<username>` location in the system. This is also denoted by `~`.

@@ -15,14 +15,33 @@ $terminal-prompt: "$ ";
     }
 }
 
-.language-bash .line:first-child .cl::before {
+// .language-shell .line:first-child .cl::before {
+//     content: $terminal-prompt;
+// }
+
+.show-prompt .line:first-child .cl::before {
     content: $terminal-prompt;
 }
 
-.language-shell .line:first-child .cl::before {
-    content: $terminal-prompt;
+.show-prompt-all {
+    .line .cl:before {
+        content: $terminal-prompt;
+    }
 }
 
-.language-bash .cl::before {
-    content: $terminal-prompt;
+.show-prompt-odd {
+    .line:nth-child(2n + 1) {
+        .cl::before {
+            content: $terminal-prompt;
+        }
+    }
 }
+
+.show-prompt-even {
+    .line:nth-child(2n) {
+        .cl::before {
+            content: $terminal-prompt;
+        }
+    }
+}
+
