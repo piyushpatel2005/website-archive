@@ -1,5 +1,6 @@
 $global-font-size: 1.20rem !default;
-$terminal-prompt: "$ ";
+$terminal-prompt: "~ $ ";
+$terminal-prompt-color: #927bbe;
 
 .archive .single-title {
     text-align: center;
@@ -21,11 +22,15 @@ $terminal-prompt: "$ ";
 
 .show-prompt .line:first-child .cl::before {
     content: $terminal-prompt;
+    font-weight: bold;
+    color: $terminal-prompt-color;
 }
 
 .show-prompt-all {
     .line .cl:before {
         content: $terminal-prompt;
+        font-weight: bold;
+        color: $terminal-prompt-color;
     }
 }
 
@@ -33,6 +38,8 @@ $terminal-prompt: "$ ";
     .line:nth-child(2n + 1) {
         .cl::before {
             content: $terminal-prompt;
+            font-weight: bold;
+            color: $terminal-prompt-color;
         }
     }
 }
@@ -41,7 +48,13 @@ $terminal-prompt: "$ ";
     .line:nth-child(2n) {
         .cl::before {
             content: $terminal-prompt;
+            font-weight: bold;
+            color: $terminal-prompt-color;
         }
     }
 }
 
+
+.language-fallback .line .cl {
+    color: #8f962e;
+}
