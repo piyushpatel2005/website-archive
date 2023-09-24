@@ -29,7 +29,7 @@ The easiest way to experiment with these operators is to use Python REPL (Read E
 Please, note that in REPL, it outputs the value directly without using any method like `print`. In actual code, we will have to use `print` function in order to print the output of the arithmetic operations.
 {{< /admonition >}}
 
-```shell
+```shell{ .show-prompt lineNos=false }
 python
 Python 3.9.2 (default, Feb 28 2021, 17:03:44) 
 [GCC 10.2.1 20210110] on linux
@@ -114,7 +114,7 @@ These are mathematical comparison operators. It returns boolean result based on 
 | `is` | Verifies whether two objects are same |
 | `is not` | Verifies whether two objects are different |
 
-```shell
+```shell{ .show-prompt lineNos=false }
 python
 Python 3.9.2 (default, Feb 28 2021, 17:03:44) 
 [GCC 10.2.1 20210110] on linux

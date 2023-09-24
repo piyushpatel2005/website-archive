@@ -45,7 +45,7 @@ func main() {
 ```
 
 **Output:**
-```shell
+```shell{ .show-prompt lineNos=false }
 go run main.go
 ```
 
@@ -89,7 +89,7 @@ func main() {
     fmt.Println(a, b) // print multiple variables
 }
 ```
-```shell
+```shell{ .show-prompt lineNos=false }
 go run main.go
 ```
 
@@ -132,7 +132,7 @@ func main() {
 
 **Output:**
 
-```bash
+```bash{ .show-prompt lineNos=false }
 go run main.go
 ```
 ```{ lineNos=false }
@@ -154,7 +154,7 @@ func main() {
 }
 ```
 
-```bash
+```bash{ .show-prompt lineNos=false }
 go run main.go
 ```
 

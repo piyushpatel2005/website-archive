@@ -17,8 +17,8 @@ This takes us to respective version download for different operating system. Dep
 
 Once Go is installed, you can verify the installation by typing `go version` on your terminal or command prompt. This should show the installed version of Go binaries.
 
-```bash
-$ go version
+```bash{ .bash-prompt lineNos=false }
+go version
 go version go1.20.2 darwin/arm64
 ```
 

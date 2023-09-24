@@ -58,7 +58,7 @@ As you can see, `string` data type, we can use either single quote (`'`) or doub
 
 If I execute this code, it prints below.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 python main.py
 ```
 

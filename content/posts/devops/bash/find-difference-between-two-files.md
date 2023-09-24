@@ -13,14 +13,14 @@ Often times, we want to find the difference between two files to compare the out
 
 First we can check if there is a difference between two files by checking their line counts.
 
-```bash
+```bash{ .show-prompt-all lineNos=false }
 cat file1.txt | wc -l
 cat file2.txt | wc -l
 ```
 
 Let's say we have two files with below contents.
 
-```shell { lineNos=false }
+```shell { .show-prompt lineNos=false }
 cat file1.txt 
 1
 3
@@ -30,7 +30,7 @@ cat file1.txt
 4
 ```
 
-```shell { lineNos=false }
+```shell { .show-prompt lineNos=false }
 cat file2.txt 
 5
 3
@@ -42,7 +42,7 @@ cat file2.txt
 
 First option is to check GNU `diff` command. This command compares files line by line. When we run `diff file1.txt file2.txt` we get below output. The `diff` command outputs lines unique to `file1.txt` with `>`. Each line starting with `>` will be the line which is available in only `file1.txt` but not present in `file2.txt` file. Again this checks line by line, so if both files do not have same content on same line number, that will be output.
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 diff file2.txt file1.txt | grep '^>'
 > 1
 > 2
@@ -63,7 +63,7 @@ From below table, the line 1, 4, 5, 6 do not match with corresponding lines from
 
 If we want the lines from `file2.txt` which are not matching with `file1.txt`, then we can check for lines starting with `<`
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 diff file2.txt file1.txt | grep '^<'
 < 5
 < 0
@@ -71,13 +71,13 @@ diff file2.txt file1.txt | grep '^<'
 
 To get the actual content of those lines, we can use `awk` or `cut` command.
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 diff file2.txt file1.txt | grep '^<' | awk '{print $2}'
 5 
 0
 ```
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 diff file2.txt file1.txt | grep '^<' | cut -d' ' -f 2
 5
 0
@@ -87,7 +87,7 @@ diff file2.txt file1.txt | grep '^<' | cut -d' ' -f 2
 
 If we want to get only unique lines which do not match between two files, then we have to first sort the files and then compare.
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 diff <(sort file1.txt) <(sort file2.txt) | grep "^<" | awk '{print $2}'
 1
 2
@@ -104,7 +104,7 @@ This command line utility `comm` can be used to compare two sorted files line by
 
 So, if we want to find lines which are present in `file1.txt` but not in `file2.txt` then we can use options `3` (remove common lines) and `2` (remove lines present in file2). Unlike `diff` command, this command only gives the content of those lines which didn't match.
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 comm -23 <(sort file1.txt) <(sort file2.txt)
 1
 2
@@ -113,7 +113,7 @@ comm -23 <(sort file1.txt) <(sort file2.txt)
 
 Similarly, to find lines present in only `file2.txt`, use below command. Here, we kept the sequence of files same but only changed the option from `2` to `1` to remove lines which are present in `file1.txt`.
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 comm -13 <(sort file1.txt) <(sort file2.txt)
 0
 ```

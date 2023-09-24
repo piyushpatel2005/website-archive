@@ -63,6 +63,8 @@ This is called **absolute path**.
 
 ## Practical Demo
 
+### Create Directory and Navigating File System
+
 Ok, let's create our directory and try to create directories and files inside it.
 
 ```bash{ .show-prompt-all lineNos=false }
@@ -117,6 +119,46 @@ mkdir dir{2..5}
 ls dir[23]
 ```
 
+### Move, Copy, Rename Files
+
+```bash{ .show-prompt-all lineNos=false }
+touch dir1/test1.txt
+touch dir2/test2.txt
+```
+
+Now, to copy file `dir1/test1.txt` to `dir3/test3.txt` we can use below syntax.
+
+```bash{ .show-prompt-all lineNos=false}
+cp dir1/test1.txt dir3/test3.txt
+ls dir3
+```
+
+For copying and moving files, if the file with given name already existed, it will overwrite it. To avoid such situation, we can use `cp -i` or `mv -i`. This will always prompt the user to make sure the user wants to overwrite the file.
+
+```bash{ .show-prompt lineNos=false }
+cp -i dir1/test1.txt dir3/test3.txt
+cp: overwrite 'dir3/test3.txt'? n
+```
+
+By default, when we perform `cp dir1/* dir5/`, it will copy only the files, but if we want to move all contents of `dir1` including directories, we can use `cp -r` which recursively copies everything from `dir1`.
+
+```bash{ .show-prompt lineNos=false }
+cp -r dir1/* dir5
+```
+
+To move file from `dir3/test3.txt` into `dir4/`, we can use `mv` command. Note that moving a file removes the file from the source and moves it to destination.
+
+```bash{ .show-prompt lineNos=false }
+mv dir3/test3.txt dir4/
+```
+
+To rename a file, we use the same `mv` command. In this case, we just name file differently which is same as moving file to differently named file.
+
+```bash{ .show-prompt .show-prompt-even lineNos=false }
+mv dir1/test1.txt dir1/sample.txt
+ls dir1
+inside_dir1  sample.txt
+```
 
 Before, we go further, we have to learn few more Linux commands.
 
@@ -169,3 +211,51 @@ head -n 5 hello.txt # shows first 5 lines
 tail hello.txt # shows last 10 lines
 tail -n 3 hello.txt # shows last 3 lines.
 ```
+
+## Linked Files
+
+If you need to maintain two or multiple copies of the same file on the system, instead of having separate copies, we can create virtual copies. These are called **links**. There are two types of links in Linux:
+
+### 1. Symbolic link
+
+This is simply a physical file that points to another file in the virtual directory structure. 
+
+```bash{ .show-prompt-all lineNos=false }
+touch hello.txt
+ln -s hello.txt hello_symbol.txt
+ls -l
+```
+
+Below output shows that symbolik link `hello_symbol.txt` has lot smaller size. Modifying one file will modify the original file.
+
+```output{ lineNos=false }
+-rw-r--r-- 1 user group 45 Sep 15 13:02 hello.txt
+lrwxrwxrwx 1 user group  9 Sep 15 13:01 hello_symbol.txt -> hello.txt
+```
+
+This is largely used in Linux configuration files which reside in one location but can be added to another location using symbolic links.
+
+### 2. Hard link
+
+This creates a separate virtual file that contains the same information as the original file. However, these are two separates files. When we reference the hard link file, it's same as reading the original file. To create hard link, the original file must exist.
+
+```bash{ .show-prompt-all lineNos=false }
+ln hello.txt hello_hard.txt
+ls -l
+```
+
+Below output shows that hard links have exactly the same size as the original file.
+
+```output{ lineNos=false }
+-rw-r--r-- 2 piyushpatel2005 piyushpatel2005 45 Sep 15 13:02 hello.txt
+-rw-r--r-- 2 piyushpatel2005 piyushpatel2005 45 Sep 15 13:02 hello_hard.txt
+lrwxrwxrwx 1 piyushpatel2005 piyushpatel2005  9 Sep 15 13:01 hello_symbol.txt -> hello.txt
+```
+
+To unlink these links, we can use below command:
+
+```bash{ .show-prompt-all lineNos=false }
+unlink hello_hard.txt
+unlink hello_symbol.txt
+```
+

@@ -97,7 +97,7 @@ func main() {
 }
 ```
 
-```shell
+```shell{ .show-prompt lineNos=false }
 go run main.go
 Enter you age: 
 32
@@ -183,7 +183,7 @@ func main() {
 
 Below are outputs of two runs with different inputs.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 go run main.go
 ```
 **Output**

@@ -35,13 +35,13 @@ done > server.log
 
 Verify the number of lines in the file.
 
-```shell
+```shell {.show-prompt lineNos=false }
 cat server.log | wc -l # 100
 ```
 
 If we check some content of the file,
 
-```shell
+```shell{.show-prompt  lineNos=false }
 head -n 5 server.log
 ```
 
@@ -55,13 +55,13 @@ This is line 5
 
 Now, let's suppose, I am looking for word `50` and I want to see 4 lines before this as well. I can run below.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 cat server.log | grep -B 4 50
 ```
 
 The same thing can be achieved like this.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 grep -B 4 50 server.log
 ```
 
@@ -81,7 +81,7 @@ Similarly, to find lines after a certain keyword, we can use `-A` or `--after-co
 
 Let's see 3 lines after line containing word `60`.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 grep -A 3 60 server.log
 ```
 

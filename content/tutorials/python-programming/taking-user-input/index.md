@@ -26,7 +26,7 @@ print(f"Hello {name}")
 
 Execute this code and the console will wait for your input after prompt `Enter your name: `.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 python main.py
 ```
 
@@ -72,7 +72,7 @@ age = age + 1
 print(f"Hello {name}, next year you'll be {age} years old.")
 ```
 
-```shell
+```shell{ .show-prompt lineNos=false }
 python main.py
 Enter your name: John
 Enter your age: 21
