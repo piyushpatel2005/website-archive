@@ -1,5 +1,5 @@
 ---
-title: "Overview of Python"
+title: "Overview of Python Language"
 date: 2023-07-24T11:56:58-04:00
 draft: false
 ---
@@ -47,7 +47,7 @@ Some of the biggest enterprises are using Python this includes Google, Facebook,
 
 In order to write code in Python, all we need is Python development kit which includes Python interpreter. Just browse to [Python official website Downloads section](https://www.python.org/downloads/). According to your operating system, it will suggest to download specific installer at the top with **Download Python** button. Click that button and it will download the installer. According to your operating system, install that executable file. Once installed, you can verify the Python installation by using following.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 python -V
 ```
 
@@ -65,7 +65,7 @@ print("Hello World")
 
 Now, to execute this code, you can either use Code Runner which comes with Visual Studio Code or on command prompt or terminal, navigate to your workspace directory and type below command.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 python hello.py
 ```
 

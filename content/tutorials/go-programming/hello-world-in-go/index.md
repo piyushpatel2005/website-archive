@@ -31,12 +31,11 @@ On line 6, we have single statement `fmt.Println("Hello World")`. This uses our 
 
 ### Execute Our Program
 
-```bash
+```bash{ .show-prompt lineNos=false }
 go run main.go
 ```
-```{ lineNos=false codeFences=false }
+```output{ lineNos=false }
 Hello World
-$ 
 ```
 
 {{< admonition note >}}
@@ -65,7 +64,7 @@ func main() {
 }
 ```
 
-```bash
+```bash{ .show-prompt lineNos=false }
 go run main.go
 ```
 ```{ lineNos=false }
@@ -94,7 +93,7 @@ func main() {
 }
 ```
 
-```bash
+```bash{ .show-prompt lineNos=false }
 go run main.go
 ```
 ```{ lineNos=false }

@@ -25,7 +25,7 @@ func main() {
 }
 ```
 
-```shell
+```shell{ .show-prompt lineNos=false }
 go run main.go
 ```
 
@@ -99,7 +99,7 @@ func main() {
 
 If we provide 2 input in the same pattern as the format specifier, that is string followed by space and that followed by integer. It gives this output.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 go run main.go
 Hello 2
 ```
@@ -111,7 +111,7 @@ Error: <nil>
 
 However, if we do not provide integer value which is specified in the format specifier, it throws an error as shown below.
 
-```shell
+```shell{ .show-prompt lineNos=false }
 go run main.go
 Hello
 ```
@@ -141,7 +141,7 @@ func main() {
 }
 ```
 
-```shell
+```shell{ .show-prompt lineNos=false }
 go run main.go
 Hello
 There

@@ -238,7 +238,7 @@ Something to note about strings is that they are immutable. When we perform any 
 
 There are methods to change the case of string. That is to make them uppercase or lowercase.
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 python
 >>> str = "Hello there"
 >>> str.lower()
@@ -260,7 +260,7 @@ exit()
 
 There are methods to verify if a string starts with some substring or even to check whether it contains alphabetic or numeric characters.
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 python
 str = 'Hello there'
 >>> str.startswith("Hello")
@@ -285,7 +285,7 @@ True
 
 There are special functions to split a string and to join list of strings into a single string. We can also remove or replace a part of a string. 
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 python
 str = 'Hello there'
 >>> str.split()
@@ -302,7 +302,7 @@ str = 'Hello there'
 
 To find position of a substring prefer `find` method compared to `index` method because it does not throw an Error when the substring does not exist in original string.
 
-```shell{ lineNos=false }
+```shell{ .show-prompt lineNos=false }
 python
 >>> "  Hi  ".strip()
 'Hi'
