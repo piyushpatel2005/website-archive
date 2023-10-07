@@ -11,6 +11,7 @@ First of all, we need to install Java and development IDE to work with Java easi
 
 1. Download and install JDK. There are several Java Development Kit (JDK) available online. You can use Oracle JDK or OpenJDK published by major companies. Please, note that you need to install JDK and not JRE.
 2. Install IntelliJ IDEA. This is Integrated Development Environment (IDE) for Java development. This is published by company Jetbrains and they have free Community version which you can download for free. Visit [Jetbrains website](https://www.jetbrains.com/idea/download) and download IntelliJ IDEA Community Edition for your respective operating system.
+3. Download and install maven. You can verify maven installation using `mvn -version`. This should show the currently installed maven version in your system.
 
 Once these tools are installed, you can verify installation by opening terminal and typing `java -version` and it should return output with Java version installed in your system.
 
@@ -52,7 +53,7 @@ tree
                             └── AppTest.java
 ```
 
-Now, we have basic directory structure setup for Maven project. Remove the `App.java` file in `src/main/java` and `AppTest.java` in `src/test/java` directory respectively. We will write our own unit test and application code.
+Now, we have basic directory structure setup for Maven project. Remove the `App.java` file in `src/main/java` and `AppTest.java` in `src/test/java` directory respectively. Also delete the directory `src/main/resources`. We will write our own unit test and application code. 
 
 ## Adding JUnit Dependency
 
@@ -81,5 +82,41 @@ This will download all Maven packages under External Libraries in the project na
 
 ![Imported Maven Dependencies](external-libraries.JPG "External Libraries in Maven Project")
 
+## Add SureFire plugin
+
+Another important feature of Maven is the ability to run tests using single command. This allows us to add this as one of the steps for CI (Continuous Integration) process. For this, we need to add one plugin into our POM file.
+
+```xml
+<build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+        </plugins>  
+    </pluginManagement>
+</build>
+```
+
+Run `mvn clean install` to set up and install all plugins and dependencies.
+
+With this, we will be able to Maven tests using `mvn clean test` command.
+
+You should get output like below.
+
+```output {lineNos=false }
+[INFO] No tests to run.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.086 s
+[INFO] Finished at: 2023-10-05T18:59:10-04:00
+[INFO] ------------------------------------------------------------------------
+```
 
 With this, maven resolves depdendencies for JUnit. The next steps are to have some application code and we are ready to write our first unit tests.
