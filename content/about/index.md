@@ -4,8 +4,6 @@ date: 2023-07-20T16:51:27-04:00
 draft: false
 ---
 
-# About Us
-
 This section describes who we are and what is our expertise within Technology space.
 <!--more-->
 
