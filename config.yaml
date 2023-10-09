@@ -27,6 +27,12 @@ menu:
       pre: ""
       post: ""
     - weight: 30
+      identifier: "data-structures-and-algorithms"
+      name: "Data Structures & Algorithms"
+      url: "/data-structures-algorithms"
+      pre: ""
+      post: ""
+    - weight: 40
       identifier: "about"
       name: "About Us"
       url: "/about"
