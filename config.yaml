@@ -58,3 +58,10 @@ params:
 Permalinks:
   posts: blog/:slugorfilename
   tutorials: :sections[1:]/:slugorfilename
+taxonomies:
+  category: categories
+  tag: tags
+  topic: topics
+  idea: ideas
+  language: languages
+
