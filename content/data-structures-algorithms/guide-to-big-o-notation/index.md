@@ -14,7 +14,25 @@ During this tutorial, we will sometimes use pseudocode. Pseudocode is a simple, 
 
 ## What is Big-O Notation?
 
-Big-O notation is a way of expressing the upper bound or worst-case time complexity of an algorithm. It allows programmers and researchers to analyze and compare the efficiency of algorithms based on how their running time grows relative to the size of the input.
+Big-O notation is a way of expressing the upper bound or worst-case time complexity of an algorithm. It allows programmers to analyze and compare the efficiency of algorithms based on how their running time grows relative to the size of the input.
+
+Big O is used to describe the computational complexity of an algorithm. The computational complexity of an algorithm can be categorized into two main parts. In interviews, usually you may be asked to analyze the algorithm in terms of these two.
+
+1. Time complexity: The amount of time an algorithm takes to run relative to the input size.
+2. Space complexity: The amount of memory allocated by the algorithm when run relative to the input size.
+
+## How to define complexities?
+
+The idea for defining complexities is how the algorithm scales when the input size increases. So, the complexities are defined in terms of input element size. That is the function has a parameter of input size. 
+
+\\[f(n)\\quad, where \\; n = size \\:of \\:input \\:data \\:structure\\]
+
+It is possible that the algorithm may perform faster for a input array of 100000 elements when compared to 100 elements.
+
+## TODO:
+- [ ] Add idea on how different time complexities
+- [ ] how to calculate time complexity, ignore constants and multipliers, etc.
+- [ ] show few examples with below time complexity graphs
 
 In Big-O notation, algorithms are classified into different categories depending on how their running time scales with the input size. For example, an algorithm with O(1) complexity means it has constant time, meaning its running time does not depend on the input size. An algorithm with O(n) complexity means its running time is directly proportional to the input size.
 
