@@ -4,6 +4,7 @@ date: 2023-09-23T20:37:33Z
 draft: true
 tags: ["Bash", "Shell"]
 categories: ["Data Processing"]
+languages: ["Bash"]
 ---
 
 

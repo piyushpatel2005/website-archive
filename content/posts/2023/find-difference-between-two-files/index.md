@@ -4,6 +4,7 @@ date: 2023-09-08T19:18:20Z
 draft: false
 tags: ["Bash", "Shell"]
 categories: ["DevOps"]
+languages: ["Bash"]
 ---
 
 Often times, we want to find the difference between two files to compare the output of something. This is very useful in debugging issues when we want to check for what's the difference. We can use different Bash tools for this. That is what we are going to discuss in this post.
