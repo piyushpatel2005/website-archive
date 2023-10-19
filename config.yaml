@@ -27,6 +27,12 @@ menu:
       pre: ""
       post: ""
     - weight: 30
+      identifier: "data-structures-and-algorithms"
+      name: "Data Structures & Algorithms"
+      url: "/data-structures-algorithms"
+      pre: ""
+      post: ""
+    - weight: 40
       identifier: "about"
       name: "About Us"
       url: "/about"
@@ -52,3 +58,10 @@ params:
 Permalinks:
   posts: blog/:slugorfilename
   tutorials: :sections[1:]/:slugorfilename
+taxonomies:
+  category: categories
+  tag: tags
+  topic: topics
+  idea: ideas
+  language: languages
+
