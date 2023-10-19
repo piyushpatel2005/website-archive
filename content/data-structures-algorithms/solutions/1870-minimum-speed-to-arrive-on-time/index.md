@@ -109,25 +109,10 @@ class Solution {
             double timeSpent = dist[i] * 1.0 / speed;
             totalTime += (i == dist.length - 1 ? timeSpent : Math.ceil(timeSpent));
         }
-        System.out.println("speed: " + speed + ", totalTime: " + totalTime + ", hour: " + hour);
         return totalTime <= hour;
     }
 }
 ```
-
-There is little issue with this logic that even though we might have found optimum speed, we will still jump around the optimum value. This can be noticed by using below test case in JUnit.
-
-```java
-class SolutionTest {
-    @DisplayName("Test minimumSpeedOnTime produces correct results")
-    @Test
-    void testMinimumSpeedOnTime() {
-        assertEquals(5, minimumSpeedToArrive.minSpeedOnTime(new int[]{1, 4, 3, 2, 5, 6}, 6.2));
-    }
-}
-```
-
-Based on the print statement results from the `verify` method, you can see that we had reached the optimum speed of 5 and then we jumped around to reach the result once again. Although this is not a very critical time lapse as it does not change the time complexity of the algorithm.
 
 In this case, we are able to solve the problem with time complexity of `O(n log (right - left))`. `n` because we are iterating through each element of the `dist` array and `log (right - left)` as we are using binary search to reach optimal speed. Also in this case, we are not using any other variable for storing values, so the space complexity is constant.
 

@@ -3,11 +3,8 @@ title: "Two Pointers"
 date: 2023-10-16T04:05:16-04:00
 draft: true
 categories: ["Coding Interview"]
-tags: ["Leetcode", "Medium"]
-difficulty: ["Medium"]
 topics: ["Programming"]
 ideas: ["Two Pointers"]
-languages: ["Java"]
 ---
 
 Two pointers is one of the very common techniques used to solve array, string problems. This can be useful especially when the elements are sorted in some order. This article explains the approach of two pointers to solve some of the common problems.
