@@ -4,7 +4,7 @@ title: 'Piyush Patel Website'
 theme: 'LoveItCustom'
 author:
   name: Piyush Patel
-  homepage: https://piyushpatel2005.github.io
+  homepage: https://piyushpatel.vercel.app
 markup:
   highlight:
     codeFences: true
