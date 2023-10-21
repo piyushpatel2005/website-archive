@@ -1,0 +1,8 @@
+{
+    "build": {
+      "env": {
+      "HUGO_VERSION": "0.119.0",
+      "VERCEL_ENV": "production"
+      }
+    }
+  }

@@ -4,7 +4,7 @@ title: 'Piyush Patel Website'
 theme: 'LoveItCustom'
 author:
   name: Piyush Patel
-  homepage: https://piyushpatel2005.github.io
+  homepage: https://piyushpatel.vercel.app
 markup:
   highlight:
     codeFences: true
@@ -27,6 +27,12 @@ menu:
       pre: ""
       post: ""
     - weight: 30
+      identifier: "data-structures-and-algorithms"
+      name: "Data Structures & Algorithms"
+      url: "/data-structures-algorithms"
+      pre: ""
+      post: ""
+    - weight: 40
       identifier: "about"
       name: "About Us"
       url: "/about"
@@ -46,9 +52,16 @@ params:
       auto: true
     code:
       copy: true
-      maxShownLines: 50
+      maxShownLines: 200
     math: 
       enable: true # enable LaTeX
 Permalinks:
   posts: blog/:slugorfilename
   tutorials: :sections[1:]/:slugorfilename
+taxonomies:
+  category: categories
+  tag: tags
+  topic: topics
+  idea: ideas
+  language: languages
+
