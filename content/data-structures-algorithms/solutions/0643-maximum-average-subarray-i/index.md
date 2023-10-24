@@ -64,19 +64,20 @@ class Solution {
     public double findMaxAverage(int[] nums, int k) {
         int left = 0, right = 0;
         int currentSum = 0;
-        double maxAverage = Integer.MIN_VALUE;
+        double maxAverage = 1.0 * Integer.MIN_VALUE;
         double currentAverage = Double.MIN_VALUE;
         while (right < nums.length) {
             currentSum += nums[right];
             if (right - left + 1 == k) {
                 currentAverage = (double) currentSum / k;
-                maxAverage = Math.max(maxAverage, currentAverage);
+                System.out.println("currentAverage: " + currentAverage + " maxAverage: " + maxAverage);
+                maxAverage = Math.max(1.0* maxAverage, currentAverage);
                 currentSum -= nums[left];
                 left++;
             }
             right++; // This has to be outside otherwise while loop will not terminate
         }
-        return maxAverage;
+        return 1.0 * maxAverage;
     }
 }
 ```
