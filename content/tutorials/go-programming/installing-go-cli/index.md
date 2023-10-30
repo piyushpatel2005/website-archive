@@ -15,9 +15,17 @@ Installing Go is quite straight forward. Just navigate to [this page](https://go
 
 This takes us to respective version download for different operating system. Depending on your OS, you can choose one of the ways to download the binaries. It also has default windows installers which you can find with extension `.msi` and similarly for MacOS, it has `.pkg` files which are easily extracted to install it. If you need to install any other version, you can also do so by choosing earlier versions.
 
+For Ubuntu or UNIX based systems we can install them by following below commands.
+
+```shell{.show-prompt-all lineNos=false}
+sudo tar -C /usr/local -xzf go1.12.6.linux-amd64.tar.gz
+tar -xzf go*.tar.gz
+sudo cp -r go /usr/local/
+```
+
 Once Go is installed, you can verify the installation by typing `go version` on your terminal or command prompt. This should show the installed version of Go binaries.
 
-```bash{ .bash-prompt lineNos=false }
+```bash{ .show-prompt lineNos=false }
 go version
 go version go1.20.2 darwin/arm64
 ```
