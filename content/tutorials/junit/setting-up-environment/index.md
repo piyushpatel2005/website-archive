@@ -9,7 +9,7 @@ In this tutorial, we are downloading and installing required softwares and tools
 
 First of all, we need to install Java and development IDE to work with Java easily. For this tutorial, I am using Java 11. However, you use latest version of Java. It should most likely be backward compatible.
 
-1. Download and install JDK. There are several Java Development Kit (JDK) available online. You can use Oracle JDK or OpenJDK published by major companies. Please, note that you need to install JDK and not JRE.
+1. Download and install JDK. There are several Java Development Kit (JDK) available online. You can use Oracle JDK or OpenJDK published by major companies. Please, note that you need to install JDK and not JRE. You may also need to set up `PATH` variable to include Java binaries and `JAVA_HOME` variable to point to Java installation directory.
 2. Install IntelliJ IDEA. This is Integrated Development Environment (IDE) for Java development. This is published by company Jetbrains and they have free Community version which you can download for free. Visit [Jetbrains website](https://www.jetbrains.com/idea/download) and download IntelliJ IDEA Community Edition for your respective operating system.
 3. Download and install maven. You can verify maven installation using `mvn -version`. This should show the currently installed maven version in your system.
 

@@ -120,3 +120,75 @@ Actual   :2
 ```
 
 This was the very basic test case. The passed tests do not mean our code is correct but it gives us a way to validate our methods. We may have to add than one assertions in single test method.
+
+## `DisplayName` annotation
+
+Now, at the moment, it shows somewhat unusual description of methods. What if we had two different methods for testing `add()` functionality of the `CalculatorTest`. In this case, two methods will have different names but still it will be hard to read. Check below example with two methods.
+
+```java
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class CalculatorTest {
+    @Test
+    void testAdd() {
+        Calculator calculator = new Calculator();
+        assertEquals(2, calculator.add(1, 1));
+    }
+
+    @Test
+    void testAddNegativeNumbers() {
+        Calculator calculator = new Calculator();
+        assertEquals(-5, calculator.add(-2, -3));
+    }
+}
+```
+
+Again as previous method, we need to annotate the method with `@Test` which will mark the method as JUnit test method. When we run this method, it shows output like below.
+
+![Two methods under test](two-methods.JPG "JUnit Test Run for Two methods")
+
+In this case, it's unclear exactly what these methods are testing. So, some developers use long naming conventions. That convention may use camel-case notation or some other notation like below.
+
+```java
+void testPositiveAddition_WhenBothNumbersPositive_ShouldReturnCorrectResult() {
+
+}
+
+void testNegativeAddition_WhenBothNumbersNegative_ShouldReturnCorrectResult() {
+
+}
+```
+
+Although this gives slightly more idea on what method does, it is still hard to read. To solve this, we can use `@DisplayName` annotation on test classes and test methods. This gives us better idea on what each method does or which method failed.
+
+```java
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@DisplayName("Calculator Test")
+class CalculatorTest {
+    @Test
+    @DisplayName("Test Positive Numbers Addition")
+    void testAdd() {
+        Calculator calculator = new Calculator();
+        assertEquals(2, calculator.add(1, 1));
+    }
+
+    @Test
+    @DisplayName("Test Negative Numbers Addition")
+    void testAddNegativeNumbers() {
+        Calculator calculator = new Calculator();
+        assertEquals(-5, calculator.add(-2, -3));
+    }
+}
+```
+
+In above code, we have added `@DisplayName` to the test class and both test methods. Now, if we execute the test class, we see output like this.
+
+![Test Run with DisplayName](test-with-displayname.JPG "DisplayName annotation")
+
+This annotation makes it easier to read test results. This can be very useful when we have hundreds of test cases and we have to read which ones failed.
