@@ -1,7 +1,7 @@
 ---
 title: "0209 Minimum Size Subarray Sum"
 date: 2023-10-23T16:22:52-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Medium"]
 difficulty: ["Medium"]

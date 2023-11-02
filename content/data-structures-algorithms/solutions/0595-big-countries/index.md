@@ -1,7 +1,7 @@
 ---
 title: "0595 Big Countries"
 date: 2023-10-09T18:13:35-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]

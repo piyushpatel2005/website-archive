@@ -1,7 +1,7 @@
 ---
 title: "1208 Get Equal Substrings Within Budget"
 date: 2023-10-23T18:17:41-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Medium"]
 difficulty: ["Medium"]

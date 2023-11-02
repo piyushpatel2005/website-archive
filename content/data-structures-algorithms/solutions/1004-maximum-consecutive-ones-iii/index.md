@@ -1,7 +1,7 @@
 ---
 title: "1004 Maximum Consecutive Ones Iii"
 date: 2023-10-22T00:36:41-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Medium"]
 difficulty: ["Medium"]

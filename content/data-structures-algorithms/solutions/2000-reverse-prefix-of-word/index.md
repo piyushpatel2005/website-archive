@@ -1,7 +1,7 @@
 ---
 title: "2000 Reverse Prefix of Word"
 date: 2023-10-19T17:05:11-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]

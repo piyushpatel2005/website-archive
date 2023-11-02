@@ -1,14 +1,18 @@
 ---
 title: "Two Pointers"
 date: 2023-10-16T04:05:16-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 topics: ["Programming"]
 ideas: ["Two Pointers"]
 ---
 
-Two pointers is one of the very common techniques used to solve array, string problems. This can be useful especially when the elements are sorted in some order. This article explains the approach of two pointers to solve some of the common problems.
+Two pointers is one of the very common techniques used to solve array, string problems. This technique is used when we have an element in array or list which we may want to compare with another element of the array. This article explains the approach of two pointers to solve some of the common problems.
 <!--more-->
+
+## What is Pointer?
+
+In computer science, pointer is a reference to a memory address. In the system, we have a stack or heap of memory. The memory we can think of like a laid out blocks which can store specific amount of information. Each block as an associated address which is used to find the values stored in that memory address space. Pointers are used by many data structures. The most common one is arrays which is how we get faster scan time for array data structures.
 
 ## Basic Idea
 
@@ -34,6 +38,19 @@ while left less than right
 This idea can be used in many algorithms. With this technique, we never have to run through an element twice. This can help eliminate additional iteration in nested loops and can give time complexity of `O(n)` which may be the best possible complexity for the problem at hand.
 
 This very same idea can be used to solve at least below problems.
+
+## Reverse a string or array
+
+Given an array of characters `s`, reverse the array.
+
+```markdown
+Initialize one pointer left = 0
+initialize another pointer right = s.length - 1
+while left less than right
+    swap character at s[left] and s[right]
+    increment left
+    decrement right
+```
 
 ## Palindrome
 

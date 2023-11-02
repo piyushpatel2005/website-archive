@@ -1,7 +1,7 @@
 ---
 title: "0001 Two Sum"
 date: 2023-10-16T15:26:18-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]
