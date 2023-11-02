@@ -2,6 +2,7 @@ baseURL: 'http://example.org/'
 languageCode: 'en-us'
 title: 'Piyush Patel Website'
 theme: 'LoveItCustom'
+enableRobotsTXT: false
 author:
   name: Piyush Patel
   homepage: https://piyushpatel.vercel.app

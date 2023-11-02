@@ -1,7 +1,7 @@
 ---
 title: "0283 Move Zeroes"
 date: 2023-10-19T15:30:37-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]

@@ -1,7 +1,7 @@
 ---
 title: "1870 Minimum Speed to Arrive on Time"
 date: 2023-10-13T20:02:59-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Medium"]
 difficulty: ["Medium"]

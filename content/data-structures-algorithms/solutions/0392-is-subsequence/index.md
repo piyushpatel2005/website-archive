@@ -1,7 +1,7 @@
 ---
 title: "0392 Is Subsequence"
 date: 2023-10-17T11:23:47-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]

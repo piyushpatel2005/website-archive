@@ -1,7 +1,7 @@
 ---
 title: "0977 Squares of Sorted Array"
 date: 2023-10-18T18:12:34-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]

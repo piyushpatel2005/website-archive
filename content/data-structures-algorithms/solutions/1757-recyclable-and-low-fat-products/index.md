@@ -1,7 +1,7 @@
 ---
 title: "1757 Recyclable and Low Fat Products"
 date: 2023-10-09T18:41:06-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]

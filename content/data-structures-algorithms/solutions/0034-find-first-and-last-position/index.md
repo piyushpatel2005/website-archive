@@ -1,7 +1,7 @@
 ---
 title: "0034 Find First and Last Position"
 date: 2023-10-09T15:46:00-04:00
-draft: true
+draft: false
 categories: ["Coding Interview"]
 tags: ["Leetcode", "Medium"]
 difficulty: ["Medium"]
