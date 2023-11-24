@@ -6,7 +6,7 @@ categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]
 topics: ["Programming"]
-ideas: ["Two Pointers"]
+ideas: ["Hashing"]
 languages: ["Java"]
 ---
 
@@ -54,7 +54,7 @@ public class Solution {
     public int[] twoSumsBrute(int[] nums, int target) {
         int[] result = {-1, -1};
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 1; j < nums.length; j++) {
+            for (int j = 0; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target && i != j) {
                      result[0] = i;
                      result[1] = j;
@@ -74,42 +74,22 @@ With this approach we can quadratic time complexity.
 
 ## Better Solution
 
-The better idea would be to use two pointers and use them to navigate closer to the result. In this case, we have sorted array as input and this allows us to use two pointers, because we know in which direction the numbers will be larger. The basic algorithm for this looks like below.
-
-```markdown
-Initialize one pointer left = 0
-Initialize another pointer right = nums.length - 1
-while left less than right
-    Check if nums[left] + nums[right] greater than target
-        right = right + 1
-    Else if nums[left] + nums[right] less than target
-        left = left + 1
-    Else 
-        return [left, right]
-If we didn't find a pair, return false
-```
-
-Let's convert this pseudo code into actual Java program.
+In this case, the better idea is to use `HashMap` to keep track of numbers already seen with their index position.
 
 ```java
 class Solution {
-    public int[] twoSums(int[] nums, int target) {
-        int[] result = {-1, -1};
-        int left = 0, right = nums.length - 1;
-        while (left < right) {
-            if (nums[left] + nums[right] > target) {
-                right--;
-            } else if (nums[left] + nums[right] < target) {
-                left++;
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            System.out.println(map
+            );
+            if (map.containsKey(target-nums[i])) {
+                return new int[] {map.get(target-nums[i]), i};
             } else {
-                result[0] = left;
-                result[1] = right;
-                return result;
+                map.put(nums[i], i);
             }
         }
-        return result;
+        return new int[] {-1, -1};
     }
 }
 ```
-
-Also, to cover the edge case, we have initialized `result` array with index positions `[-1, -1]`. So, if we didn't find any indices which satisfies the condition, we return `[-1, -1]` invalid indices.
