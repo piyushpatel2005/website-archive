@@ -6,7 +6,7 @@ categories: ["Coding Interview"]
 tags: ["Leetcode", "Medium"]
 difficulty: ["Medium"]
 topics: ["Programming"]
-ideas: ["Iteration"]
+ideas: ["Array"]
 languages: ["Java"]
 ---
 

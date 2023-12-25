@@ -6,7 +6,7 @@ categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]
 topics: ["Programming"]
-ideas: ["Hashing", "Iteration"]
+ideas: ["Hashing", "Array"]
 languages: ["Java"]
 ---
 
