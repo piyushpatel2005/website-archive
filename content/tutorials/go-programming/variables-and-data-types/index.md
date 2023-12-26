@@ -218,6 +218,8 @@ As we saw in examples above that we have data types for primitive types like int
 | bool | boolean |
 | rune | same as int32 |
 
+Go support `int`, `uint` and `uintptr` which are implementation-specific types. Their allowed min and max range depends on the computer architecture. If the code is running on 32-bit architecture then `int` type will be of 32-bit integer. If the code is running on 64-bit architecture, the range will be 64-bit integer range.
+
 There are also other container data types which we will discuss in lot more detail in this tutorial series. These are arrays, slices, maps and structs. Below table gives brief idea about those, but we will see their examples throughout the tutorials.
 
 | Data Type | Description |

@@ -4,11 +4,24 @@ date: 2023-12-10T19:54:37-05:00
 draft: false
 ---
 
-Go routines is the mechanism used in Go to run concurrent programs. This is considered as a lightweight thread that has its own independent execution. Go routines can be executed concurrently with other go-routines and it is the fundamental way to execute concurrent  programs in Go. Go routines are managed by Go runtime. The syntax looks like below which applies to functions or methods. `go` keyword makes it run in a separate go routine.
+Go routines is the mechanism used in Go to create concurrent programs. A goroutine is a simple function or method which runs concurrently with other functions or methods. This is considered as a lightweight thread that has its own independent execution. 
+
+<!--more-->
+
+Go routines can be executed concurrently with other go-routines and it is the fundamental way to execute concurrent programs in Go. Go routines are managed by Go runtime. The syntax looks like below which applies to functions or methods. `go` keyword makes it run in a separate go routine.
 
 ```go
 go func_name()
 ```
+
+Other programming languages use the concept of threads to achieve concurrency. In the Go programming language, instead of using threads, you utilize lightweight and more compact functions or procedures to execute concurrently. When compared to operating numerous threads concurrently, the resource cost of constructing goroutines is extremely low. Go routines only consume a small amount of memory. Threads, on the other hand, often require a fixed amount of memory which often around 100 times more than goroutines.
+
+### Comparison of Threads and Go routine
+
+- go routines are cheaper. Just few KBs in stack and stack can grow and shrink in size in Go. With threads, stack size has to be specified upfrtont and is fixed in size. OS threads generally start with 1MB size. Go routines are cheap so we can start hundreds of thousands of go-routines.
+- Go routines are multiplexed to a fewer number of OS threads. Even a single OS thread can handle 1000s of go routines.
+- Scheduling of go routines is managed by Go runtime. So, it's faster. For threads, scheduling is done by OS runtime. So, context switching time for go-routines is much faster.
+- Go routines communicate using channels. Channels do not cause race condition when using shared memory. This is a powerful construct built into the language. It can be thought of bytes using with Go routines communicate with each other.
 
 You can find an [example of go-routines](./src/27-go-routine.go) in code directory of this repo.
 

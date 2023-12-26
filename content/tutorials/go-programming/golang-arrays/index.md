@@ -284,6 +284,46 @@ func main() {
 6
 ```
 
+## Copying and Comparing Arrays
+
+If you assign an array to a new variable, Go creates a new copy of the array. In other languages, arrays are of reference types, however in Go arrays are value types. This means if we modify this new variable elements, it will not impact the original array.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	numbers := [...]int{1, 2, 3}
+	new_numbers := numbers
+	numbers[1] = 200
+	fmt.Println(numbers)
+	fmt.Println(new_numbers)
+}
+```
+
+```shell{.show-prompt lineNos=false}
+go run main.go
+[1 200 3]
+[1 2 3]
+```
+
+For comparing two arrays, in other languages, you may need to check each element of both array and compare them. If all of them match, then they are called equal arrays. However, in Go, we can easily compare two arrays using double equals (`==`). We do not need to iterate through each element of the array.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	numbers1 := [...]int{1, 2, 3}
+	numbers2 := [3]int{1, 2, 3}
+	fmt.Println(numbers1 == numbers2) // true 
+	numbers1[2] = 30
+	fmt.Println(numbers1 == numbers2) // false
+}
+```
+
 ## Conclusion
 
 In this lesson, we looked at how to initialize a single dimensional and multi-dimensional array. We saw how we can access individual elements at a given index position using *Array Indexing*. Further in this tutorial, we looked at how to iterate through arrays.
