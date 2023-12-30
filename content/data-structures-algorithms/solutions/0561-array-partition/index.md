@@ -6,7 +6,7 @@ categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]
 topics: ["Programming"]
-ideas: ["Sorting", "Iteration"]
+ideas: ["Sorting", "Array"]
 languages: ["Java"]
 ---
 
