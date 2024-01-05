@@ -14,7 +14,17 @@ This tutorial is providing brief overview of how variables are created in comput
                                                       
 The computers these days are extremely fast and even though efficient and non-efficient algorithm might produce output in almost similar amount of time to bare eyes. They do differ in their speed. This may not be noticeable for small dataset, but if the input size increases by thousands, it will clearly be visible which algorithm is performing faster.
 
-RAM in computer memory is limited in size, usual size being 8GB, 16GB. Accessing memory from any location is fast and is considered as a constant time operation and is to considered in the calculations of time analysis. Let's see what happens when we initialize a variable.
+RAM in computer memory is limited in size, usual size being 8GB, 16GB. This is called Random Access Memory. This means whenever we want to read some value from any part of the memory block, we do not have start from the start, we can directly read from that memory address. Accessing memory from any location is fast and is considered as a constant time operation and is to considered in the calculations of time analysis. Let's see what happens when we initialize a variable.
+
+Now, in computer systems, usually we have different types of memory. Cache is like very close to CPU. All the arithmetic operations are performed at this cache level. This is the fastest memory but it is limited in space and costs too much. Now, cache memory can be of different levels. It is to improve speed of various computational operations. Then comes RAM in terms of speed. Next comes file operations which is very slow compared to earlier memory locations. You can visualize the speed of operations from below table. This is just for reference and actual speed might change over time, but not by larger margin. It's few orders of magnitude slower at each level. 
+
+## TODO: update this table
+
+| Memory Type   | Speed of Operation    |
+| L1 cache      | 0.5 ns                |
+| L2 cache      | 7 ns                  |
+| Main Memory   | 100 ns                |
+| 
 
 We can visualize memory as a 2D array of boxes. These boxes are empty at the beginning. In reality, they will contain some garbage value which is of no use. In below diagram, I have shown only 20 blocks of memory. Assume that each memory block is one byte long for simple illustration.
 
@@ -27,6 +37,8 @@ In this case, the memory address 0000 has the value `0`. I have marked the memor
 When we create a value of integer or string data type, those are actually converted into binary representation. That is values of 1s and 0s. As you might know, that computers store everything in the form of 1s and 0s. So, there must be some conversion to convert whatever we enter into binary representation. It turns out mathematicians have already solved this using Decimal to Binary representation. Decimal are the numbers as we know them in real life. Binary is the number representation in the form of 1s and 0s which computers can understand and store.
 
 OK, so numbers can be converted into binary representation but how are string values stored? It turns out that each string character can also be converted into numbers by using ASCII characters. This basically maps each alphabetic character into a number representation. There are several other encoding schemes like this, but this was just to explain that everything is stored as numbers in computer memory.
+
+Each data type in a programming langauge takes up specific amount of memory to store its values. For example, `int` data type in Java would take up 4 bytes whereas `double` data type takes 8 bytes of memory. Similarly, each data type has specific amount memory allocated in the main memory when we declare those variables.
 
 ## Memory for JVM Languages
 

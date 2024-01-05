@@ -21,7 +21,27 @@ The lists can be mainly categorized into two main types.
 1. Singly Linked List
 2. Doubly Linked List
 
-This lesson focuses on Singly Linked List.
+You can perform following operations on a list.
+
+1. retrieve element from the list
+2. insert a new element into the list
+3. delete an element from the list
+4. check if an element occurs in the given list
+5. find out how many elements are in the list
+
+A list can be implemented using two ways. One is using array to store its elements. Another approach uses `Node` elements. That actually uses linked data structure.
+
+## ArrayList implementation
+
+To implement a list using arrays, we can store elements in an array. However, arrays have fixed size. If we exceed that size, we may get `ArrayIndexOutOfBoundsException`. So, to avoid such situation, we will need to expand our array when we reach end of the list. This operation literally requires creating new array and copying existing elements into the new array of larger size. This is an expensive operation as it requires `O(n)` time complexity. This is also called dynamic arrays sometimes because they change the size based on number of elements. 
+
+With this idea in mind, inserting new element will require just adding new element at the `size - 1` index position as long as the array has enough empty spaces.
+deleting an element can be slightly expensive ope
+In Java, collections are implemented based on interface structure.
+
+![List interface hierarchy](list-interface.png)
+
+We also have to override some of the methods defined in the `Collection` interface for standard Java library.
 
 ## What is Singly Linked List
 
