@@ -101,7 +101,7 @@ func main() {
 	}
 	elapsed := time.Since(start)
 	fmt.Println("Elapsed time", elapsed)
-	time.Sleep(2 * time.Second) // add this timeout so that it doesn't exit without printing results
+	time.Sleep(2 * time.Second)
 }
 
 func printSequence(i int) {
@@ -114,7 +114,7 @@ In this code, we are using `printSequence` function as a goroutine. Previously, 
 
 ## Goroutine Scheduler
 
-When we launch go program, it will launch OS threads that is proportional to logical CPUs available. They are completely managed by kernel at OS level. From creating, managing and terminating threads is managed by OS. We can find available number of logical processors using runtime package with a property `Numcpus()` methods. The logical threads are the number of physical cores available in your system multiplied by the number of threads that can run on each core (hardware threads). Go routines are lightweight application threads that run independent of one another. The go routine has scheduler that will multiplex the go-routines on OS level threads in the go runtime. It schedules arbitrary number of go-routines onto an arbitrary number of OS threads(m x n multiplexing).
+When we launch go program, it will launch OS threads that is proportional to logical CPUs available. They are completely managed by kernel at OS level. From creating, managing and terminating threads is managed by OS. We can find available number of logical processors using runtime package with `Numcpus()` methods. The logical threads are the number of physical cores available in your system multiplied by the number of threads that can run on each core (hardware threads). Go routines are lightweight application threads that run independent of one another. The go routine has scheduler that will multiplex the go-routines on OS level threads in the go runtime. It schedules arbitrary number of go-routines onto an arbitrary number of OS threads(m x n multiplexing).
 
 **OS Scheduler** manages OS threads for each logical core. Within Go runtime, each of these threads will have one queue associated with it called LRQ (Local Run quque). It consists of all go-routines to be executed in that thread. Go runtime scheduler will perform scheduling and context switching belonging to LRQ. We also have GRQ (Global run queue). It consists of all go-routines which are not assigned any LRQ. Go scheduler will assign these go routines to any of the Local run queue of OS thread. This is how Go scheduler works and multiplexes go routines on OS threads. Properties of Go scheduler include:
 
