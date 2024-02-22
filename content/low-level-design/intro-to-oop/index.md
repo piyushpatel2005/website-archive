@@ -247,11 +247,11 @@ public class Main {
 }
 ```
 
-In this example, we have a superclass `Animal` with a method `makeSound()`. Both the `Dog` class and the `Cat` class override the `makeSound()` method with their own implementations. When we create objects of type `Animal` but instantiate them as `Dog` or `Cat`, the overridden methods are invoked based on the actual type of the object at runtime. This type of polymorphism is also called *Runtime Polymorphism*
+In this example, we have a superclass `Animal` with a method `makeSound()`. Both the `Dog` class and the `Cat` class override the `makeSound()` method with their own implementations. When we create objects of type `Animal` but instantiate them as `Dog` or `Cat`, the overridden methods are invoked based on the actual type of the object at runtime. This type of polymorphism is also called *Runtime Polymorphism*. This is also known as dynamic polymorphism or late binding. It allows objects of classes to be treated as objects of a common superclass and invokes overridden methods from subclass at runtime.
 
 #### 2. Method Overloading:
 
-Method overloading enables us to define multiple methods with the same name but with different parameter lists within the same class. In this case, the method signature will be different. The appropriate version of the overloaded method is selected at compile time based on the number and types of arguments provided. This is also called *Compile time Polymorphism*.
+Method overloading enables us to define multiple methods with the same name but with different parameter lists within the same class. In this case, the method signature will be different. The appropriate version of the overloaded method is selected at compile time based on the number and types of arguments provided. This is also called *Compile time Polymorphism*. This is also known as static polymorphism.
 
 ```java
 class Calculator {
