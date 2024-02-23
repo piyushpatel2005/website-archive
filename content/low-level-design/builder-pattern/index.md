@@ -157,3 +157,18 @@ The client code can pass the actual concrete builder using one of the parameters
 - Static inner classes add to the complexity of implementation.
 - Having separate builder classes along with the main product classes increase the overall code complexity.
 - Builder pattern for objects with very few parameters might be an overkill.
+
+### Comparison with Abstract Factory Pattern:
+
+| Abstract Factory Pattern                          | Builder Pattern                                                   |
+|:--------------------------------------------------|:------------------------------------------------------------------|
+| focuses on building families of related objects   | focuses on creating object step by step                           |
+| it returns the product object immediately         | it adds construction steps one by one and finally returns object. |
+| class usually includes less number of params.     | class includes lots of parameters to pass into constructor.       |
+
+## Summary
+
+- Builder pattern provides nice construction method to avoid telescoping constructors.
+- It avoids having to write multiple unnecesary constructors to handle large number of optional parameters.
+- With director, we can control the sequence of construction of objects.
+- It abstracts away object creation and follows single responsiblity principle.
