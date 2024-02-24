@@ -68,6 +68,22 @@ To avoid race condition in multi-threaded environment, we have to make `getInsta
     }
 ```
 
+One of the problems with this kind of synchronized block is that regardless of whether we want to create an instance or not, we are locking this method. This can be expensive for multi-threaded operation. In order to easily handle this situation, we can first check if the `instance` is `null`. If yes, then we assign a lock and next, we have to again check `null` to make sure no other thread has created an instance of this class. This is also called double check locking.
+
+```java
+    public static Logger getInstance() {
+        if (instance == null) {
+            synchronized (Logger.class) {
+                if (instance == null) 
+                    instance = new Logger();
+            }
+        }
+        return instance;
+    }
+```
+
+This makes sure if the instance is not initialized, then only we assign the lock. This gives performance improvement.
+
 ### Advantages:
 
 - Provides single point of access for instances of a class.
