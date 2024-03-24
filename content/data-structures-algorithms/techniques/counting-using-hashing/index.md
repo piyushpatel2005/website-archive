@@ -1,5 +1,5 @@
 ---
-title: "Couting Using Hashing"
+title: "Counting Using Hashing"
 date: 2023-12-04T23:10:53-05:00
 draft: false
 categories: ["Coding Interview"]
