@@ -25,13 +25,13 @@ Each of these categories include several different patterns mentioned below.
 
 ## 2. Structural Design Patterns
 
-- Adapter Pattern
-- Bridge Pattern
-- Composite Pattern
-- Decorator Pattern
-- Facade Pattern
-- Flyweight Pattern
-- Proxy Pattern
+- Adapter Pattern: This pattern provides a way to collaborate objects with incompatible interfaces. It is like we need adapter for exchanging information between two incompatible systems.
+- Bridge Pattern: This pattern decouples abstraction from its implementation allowing for easy changes or extension of either part of the system independently. They can be developed independently.
+- Composite Pattern: This lets you compose objects into tree like hierarchical structure and treats a group of objects as a single object allowing you to work with them in a uniform manner.
+- Decorator Pattern: Allows to add new behaviors to objects by wrapping it in a decorator object. Thus, we don't have to modify the original object's code.
+- Facade Pattern: This provides a simplified interface to a complex system and hides the underlying implementation details from the client.
+- Flyweight Pattern: It helps improve memory efficiency by sharing common parts of state between multiple objects instead of keeping all the data in each object.
+- Proxy Pattern: This provides a proxy or substitute or placeholder for another instance. This can be used in various scenarios like for access control, to perform additional actions before or after the request, lazy loading, etc.
 
 ## 3. Behavioral Design Patterns
 
