@@ -35,14 +35,14 @@ Each of these categories include several different patterns mentioned below.
 
 ## 3. Behavioral Design Patterns
 
-- Chain of Responsibility
-- Command Pattern
-- Iterator Pattern
-- Mediator Pattern
-- Memento Pattern
-- Observer Pattern
-- State Pattern
-- Strategy Pattern
-- Template Method Pattern
-- Visitor Pattern
+- Command Pattern: This pattern is used to encapsulate client requests into an object.
+- Chain of Responsibility: This creates a chain of objects which can handle incoming requests. The request passes through this chain until one of the objects handle the request.
+- Iterator Pattern: This pattern allows the access to elements of an objects without actually exposing the underlying structure of the object. How those elements are stored inside the object is not exposed.
+- Mediator Pattern: This pattern is used to restrict direct communication between two objects and forces them to collaborate using a mediator object.
+- Memento Pattern: This pattern allows capturing and restoring the internal state of an object without revealing its implementation details.
+- Observer Pattern: This allows an object to monitor the changes of another object. When an object changes its state, all the observer objects are notified and updated automatically with this pattern.
+- State Pattern: In this pattern, an object alters its behavior when its internal state changes. This allows for different  behavior of the object based on object's state.
+- Strategy Pattern: This pattern is used to define family of algorithms. This allows subclasses have different algorithm implementation and to redefine certain aspects of algorithms without changing the algorithm's structure.
+- Template Method Pattern: This defines a template (skeleton) of an algorithm in parent class. The child classes can then override specific steps without changing its structure.
+- Visitor Pattern: This pattern defines a new operation and can be applied to hierarchy of objects without changing the classes of these objects.
 
