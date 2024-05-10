@@ -26,9 +26,6 @@ In simple factory, we simply pass a parameter specifying what type of Product cl
 
 In this case, if we have to add another type of account, we have to modify not only client code but also the factory class.
 
-### Code Example:
-
-
 
 ## Factory Method Pattern:
 
