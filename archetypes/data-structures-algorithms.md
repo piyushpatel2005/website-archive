@@ -6,6 +6,6 @@ categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]
 topics: ["Programming"]
-ideas: ["Hashing"]
+ideas: ["Stacks and Queues"]
 languages: ["Java"]
 ---
