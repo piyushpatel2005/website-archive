@@ -11,6 +11,8 @@ Pointers are one of the most powerful idea in programming, but this is also one 
 
 In this lesson, we discuss pointers which are used to reference the memory address of a variable or data structure. When a variable is declared, a certain amount of memory is allocated based on the variable data type during the program execution. So, every time we execute the code, we may get different memory location. Pointer is something that holds the memory address of a variable. They do not only hold memory addresses but also point to where the memory is allocated and allows us to modify the value stored in that memory location. The same thing happens for functions as well, they are stored in memory. So, we can referene those functions and use them using pointers.
 
+In Go, everything other than slice and map are value types. If you're passing around a variable to a function, the compiler will create a local variable for that function. That means it will actually copy the contents of the original variable into a new variable and pass that to the function as a local variable. If we are passing a large struct, it may take some time and memory copying these values into a new struct. Instead if we pass these variable as a pointer, it will simply copy the memory address which will be smaller and lot more efficient for your application.
+
 There are two main operators when working with pointers.
 1. **address of operator** (`&`) gives the memory address of a variable. To use this, we precede `&` before the name of the variable.
 2. **derefernce operator** (`*`) is used to get the value at a given memory address. This operator is preceded before the memory address.
@@ -23,14 +25,14 @@ The syntax for declaring a pointer variable looks like this.
 var <pointer_name> *<data_type>
 ```
 
-Below we declare pointer variable for various data types.
+In the code below, we declare pointer variable for various data types.
 
 ```go
 var ptr_id *int
 var ptr_name *string
 ```
 
-For uninitialized pointers, we get `nil`.
+Uninitialized pointer get default value of `nil`. This means that this pointer points to nothing.
 
 **Example:**
 
@@ -82,13 +84,21 @@ func main() {
 }
 ```
 
-This code gives a random memory address in the first print statement. We can see the type of pointer as `*int`. Here, we used `a_ptr` as a variable, but we can directly use `&a` to get the same value. I have used both in print statements just for reference.
+This code gives a random memory address in the first print statement. We can see the type of pointer as `*int`. Here, we used `a_ptr` as a variable and we used `&a` and assigned the address of `a` to this variable. This variable `a_ptr` is assigned to be of type `*int` using dynamic typing.
 
 **Output:**
 
 ```output{ lineNos=false }
 *int 0xc000016058 
 int 50
+```
+
+> **Note:** If we try to dereference a pointer that has value `nil`, it will give an error. To avoid this it's always best to verify if the pointer has been assigned anything using conditional check.
+
+```go
+if a_ptr != nil {
+    // do something with a_ptr
+}
 ```
 
 We can also create a pointer variable using built-in [function new](https://pkg.go.dev/builtin#new). This sets the pointer to zero value. So, dereferencing this pointer will give zero value for respective data type.
