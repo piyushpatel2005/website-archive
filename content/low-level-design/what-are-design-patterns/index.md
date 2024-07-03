@@ -16,6 +16,7 @@ Design patterns also provide common language for communication with your colleag
 Each of these categories include several different patterns mentioned below.
 
 ## 1. Creational Design Patterns
+These are design patterns that involve instantiating concrete objects.
 
 - **[Factory Method Pattern](../factory-method-pattern/):** This provides an interface for creating objects in a superclass but actual class is created based on derived subclasses.
 - **[Abstract Factory Pattern](../abstract-factory-pattern/):** This allows creation of related classes without specifying actual concrete class.
@@ -24,6 +25,7 @@ Each of these categories include several different patterns mentioned below.
 - **[Prototype Pattern](../prototype-pattern/):** This pattern is used to copy existing objects without strong coupling with the original classes.
 
 ## 2. Structural Design Patterns
+These patterns describe how objects are connected to one another.
 
 - **[Adapter Pattern](../adapter-pattern/):** This pattern provides a way to collaborate objects with incompatible interfaces. It is like we need adapter for exchanging information between two incompatible systems.
 - **[Bridge Pattern](../bridge-pattern/):** This pattern decouples abstraction from its implementation allowing for easy changes or extension of either part of the system independently. They can be developed independently.
@@ -34,6 +36,8 @@ Each of these categories include several different patterns mentioned below.
 - **[Proxy Pattern](../proxy-pattern/):** This provides a proxy or substitute or placeholder for another instance. This can be used in various scenarios like for access control, to perform additional actions before or after the request, lazy loading, etc.
 
 ## 3. Behavioral Design Patterns
+
+Behavioral design patterns focus on how objects distribute work between each other.
 
 - **[Command Pattern](../command-pattern/):** This pattern is used to encapsulate client requests into an object.
 - **[Chain of Responsibility](../chain-of-responsibility-pattern/):** This creates a chain of objects which can handle incoming requests. The request passes through this chain until one of the objects handle the request.

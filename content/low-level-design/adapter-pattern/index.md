@@ -10,6 +10,8 @@ Adapter design pattern is a structural design pattern which is used to connect n
 
 ## What is Adapter Pattern?
 
+Adapter design pattern connects two incompatible interfaces by fitting between them and providing a compatible interface to both.
+
 Imagine that you've a data integration application which collects data from various systems and integrates into single database. You can also take a scenario where you have an existing application which uses data in one format but now want to integrate with another format data which is available through third party. In this case, the existing code was using an interface to operate with `User` data. However, the new system does not provide the data in the same format, then how do you integrate this data into single database?
 
 The solution is to create an adapter which translates data in the format provided by the third party into the format that our system is expecting. We cannot change the code by third party provider so we have to always add it in our code. We could easily create a function to integrate with new format, however, that would be less maintainable because it will break the single-responsibility principle. It is better to create a new class with this functionality.

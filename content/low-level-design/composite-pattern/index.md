@@ -9,6 +9,7 @@ Composite design pattern is a structural design pattern which allows you to use 
 <!--more-->
 
 ## What is Composite Pattern?
+This is a design pattern for composing nested structures of objects and dealing with these objects in a uniform manner.
 
 When we have a situation where our core model can be represented as a tree, we can delegate the work to hierarchy and get the results. This usually ends up creating a tree like structure where we have branches and eventually end nodes which are called leaf nodes. For example, in directory structure, we can have directories of directories as well as we can have files inside a directory. If we want to get the size of the directory, we can traverse its branches recursively and get size of all files and sum them up. In this case, we want directory (branches) and files (leaf nodes) to behave similar.
 

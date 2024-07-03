@@ -20,6 +20,8 @@ For example. if you need system wide single Logger class instance. You can creat
 2. Provide a static method for creating an instance if it doesn't exist and return existing object if it already exists. This method provides a single point of access to get an object.
 3. For multi-threaded implementation, make sure to make this method `synchronized` to avoid race conditions resulting due to multiple threads trying to access the instance of the class.
 
+## Practical Example - Logger
+
 ```java
 public class Logger {
     private static Logger instance;

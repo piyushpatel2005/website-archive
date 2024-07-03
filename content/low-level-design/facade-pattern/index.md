@@ -9,6 +9,7 @@ Facade is a structural design pattern provides a simple interface for client to 
 <!--more-->
 
 ## What is Facade?
+This is a design pattern that involves encapsulating a complex system in a simple interface.
 
 If you have built a system which uses 3rd party API or library and is tied to their implementation of specific functionality, you might have various different classes initialized to meet the requirements of the API provided by that library. Those classes and objects may not be relevant for your use case but you still needed follow the API. The end user for your application might only care about specific set of functionalities and they do not need to care about those details. In this case, Facade can provide a very simple interface for the end users of your application which hides the complexity of the system. Facade usually includes only the required features that the client wants.
 

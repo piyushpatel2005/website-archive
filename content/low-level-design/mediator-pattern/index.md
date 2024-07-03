@@ -9,6 +9,7 @@ Mediator is a behavioral design pattern which is used to define how objects inte
 <!--more-->
 
 ## What is Mediator Design Pattern?
+In this pattern, a central object coordinates the activities of many other objects.
 
 Mediator discourages direct communication between two objects because it leads to tight coupling. Instead, it promotes having a mediator which faciliates communication between these two objects. For example, in a library, each account holder do not communicate and pass books to each other. That would become very difficult. Instead, each library account holder communicates through librarian who act as a mediator. The same thing happens in business as well. If a team needs help with something, they communicate the requirement to manager and the manager passes the request to individual developer. If there was no manager acting as a mediator, it will be chaotic and developer would be swamped by requests from multiple different teams. 
 

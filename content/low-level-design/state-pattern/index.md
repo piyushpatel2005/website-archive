@@ -4,11 +4,12 @@ date: 2024-04-29T20:05:08-04:00
 draft: false
 ---
 
-The state pattern is a behavioral design pattern which can be used to represent state machine in code. Thiss tutorial explains State pattern with Java examples.
+In the state pattern, request handling takes into account the current state of the object. This tutorial explains State pattern with Java examples.
 <!--more-->
 
 ## What is State Pattern?
-The state pattern is used to localize the state behavior. The state of an object is stored in objects rather than local variables of different types. This is used to represent finite state machine. At a given point in time, the program can be in one of the finite states. For each state, the system behaves diferently. Depending on the current state of the system, it may or may not switch to other states. A simple example of state pattern is followed by switches in home. The switch can be in one of the two states: on or off. If the switch is OFF, it can switch to only ON state.
+The state pattern is a behavioral design pattern which can be used to represent state machine in code. 
+It is used to localize the state behavior. The state of an object is stored in objects rather than local variables of different types. This is used to represent finite state machine. At a given point in time, the program can be in one of the finite states. For each state, the system behaves diferently. Depending on the current state of the system, it may or may not switch to other states. A simple example of state pattern is followed by switches in home. The switch can be in one of the two states: on or off. If the switch is OFF, it can switch to only ON state.
 
 This pattern can be applied to work progress boards. The issue can only move to `IN PROGRESS` from `BACKLOG` or `BLOCKED` state. It can be moved to `DONE` only from `IN PROGRESS` state, etc. We could implement this using conditionals making sure if current state is `BACKLOG`, it can move to only `IN PROGRESS`. This might be ok for only few states but what if we have lots of states which can go through. In that case, our code will have huge `if...else` blocks. It will be difficult to manage because even a simple logic change will require lot more attention to modify the code.
 
