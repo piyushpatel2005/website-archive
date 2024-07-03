@@ -10,7 +10,7 @@ This is a creational design pattern where object creation is done without actual
 
 ## What is Factory Pattern?
 
-This pattern focuses on object creation without specifying the exact class of the object needed. The factory pattern, as the name suggests, acts like a factory which can produce desired product (object type) and delivers the objects without code needing to know the specific details of how to create it. This pattern does not expose the instantiation logic to the client and defers the instantiation logic to subclasses. Client only knows the common interface available for object creation.
+This pattern delegates concrete instantiation to a method of a subclass. This pattern focuses on object creation without specifying the exact class of the object needed. The factory pattern, as the name suggests, acts like a factory which can produce desired product (object type) and delivers the objects without code needing to know the specific details of how to create it. This pattern does not expose the instantiation logic to the client and defers the instantiation logic to subclasses. Client only knows the common interface available for object creation.
 
 This is usually implemented by the framework you use in your code but a developer can also incorporate in their code if appropriate. Factory is responsible for the lifecycle of objects and it is referenced from a common interface. It can create multiple concrete classes and will include a method to request an object using parameterized `create` method. This method is also called **virtual constructor** pattern.
 

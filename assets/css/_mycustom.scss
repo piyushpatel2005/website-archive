@@ -58,3 +58,9 @@ $terminal-prompt-color: #927bbe;
 .language-fallback .line .cl {
     color: #8f962e;
 }
+
+.special {
+    .single-title, .single-subtitle {
+        text-align: right;
+    }
+}
