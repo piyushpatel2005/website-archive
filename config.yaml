@@ -28,12 +28,24 @@ menu:
       pre: ""
       post: ""
     - weight: 30
-      identifier: "data-structures-and-algorithms"
-      name: "Data Structures & Algorithms"
-      url: "/data-structures-algorithms"
+      identifier: "high-level-design"
+      name: "HLD"
+      url: "/high-level-design"
       pre: ""
       post: ""
     - weight: 40
+      identifier: "low-level-design"
+      name: "LLD"
+      url: "/low-level-design"
+      pre: ""
+      post: ""
+    - weight: 50
+      identifier: "data-structures-and-algorithms"
+      name: "DSA"
+      url: "/data-structures-algorithms"
+      pre: ""
+      post: ""
+    - weight: 60
       identifier: "about"
       name: "About Us"
       url: "/about"
