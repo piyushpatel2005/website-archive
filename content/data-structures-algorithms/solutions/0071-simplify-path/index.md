@@ -73,3 +73,37 @@ Explanation: "..." is a valid name for a directory in this problem.
 
 ## Solution
 
+This problem can be solved using Stacks. First, we have to split the path by `/`. This will give us all directory names. Next, we iterate through these directory names and if we come across any valid names (that is path is not `.` or it's not empty like in `///` case), then we push that directory name into stack. 
+
+If we come across directory like `..` and if the stack is non-empty, then we pop out of the stack. Eventually, when we have walked through all parts of the path, we will have simplified path. The next part is to join directory names available in the stack with `/` and return that as the result.
+
+
+```java
+class Solution {
+     public String simplifyPath(String path) {
+        String[] parts = path.split("/");
+        Stack<String> stack = new Stack<>();
+
+        for(String part : parts) {
+            if (part.equals("..")) {
+                if (!stack.isEmpty()) {
+                    stack.pop();
+                }
+            } else if (!part.equals(".") && !part.isEmpty()) {
+                stack.push(part);
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for(String part : stack) {
+            sb.append("/");
+            sb.append(part);
+        }
+
+        return sb.length() > 0 ? sb.toString() : "/";
+    }
+}
+```
+
+- Time Complexity: `O(n)`
+- Space Complexity: `O(n)` as it is `O(2n)` because of array and stack, but simplified to `O(n)`
