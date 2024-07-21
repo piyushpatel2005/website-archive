@@ -18,37 +18,52 @@ An array is a data structure that allows you to store multiple elements of the s
 
 In Java, A static array has a fixed size determined at compile time. This means that once the size of a static array is defined, it cannot be changed during runtime.
 
-Declaration and Initialization of Static Arrays in Java
+### Declaration and Initialization of Static Arrays in Java
 
+```java {lineNos=false}
+dataType[] arrayName;
+dataType arrayName[];
+```
 
+For example, below code declares integer array.
 
-Accessing Elements in a Static Array
+```java { lineNos=false }
+int[] myArray;
+int myArray[];
+```
 
-Elements within a static array are accessed using their index. Indexing in arrays starts from 0. For example, to access the first element in our 'numbers' array:
+For initializing an array, we have to specify the size of the array on the right side. We can either do declaration and initization in the same line or we can choose to do them in separate lines.
 
-```java
+```java { lineNos=false }
+int[] array1 = new int[5]; // create array of size 5
+int[] array2;
+array2 = new int[10] // create array of size 10
+```
+
+By default, all elements of the array will be assigned default value of the data type. That is for integer array, it will all have value `0`.
+
+Static arrays are fixed in size. Once we define them, they have fixed size and they cannot grow or sink at runtime. Some programming languages like Javascript, Python does not have static arrays because they by default offer dynamic arrays. When you define an array, it allocates memory according to the size of the array you initialized. These memory locations are contiguous in RAM. By default, these memory locations will be filled with junk values in some programming languages like C. Other programming languages like Java, Python, etc initialize these values with default value of the data type. That is zero for integer, `null` for reference type arrays. Each of these elements have indices associated with them. Those are just convenient way to access each element of the array easily. Computer doesn't need to store those indices when you create an array. They just need to know the size and the data type.
+
+### Accessing Elements in a Static Array
+
+Elements within a static array are accessed using their index. Indexing in arrays starts from `0` in most programming languages like C, Java, C#, Python. That is the first element of the array is stored at index position `0` rather than `1`. For example, to access the first element in our 'numbers' array, you can use `numbers[0]` like below snippet.
+
+```java {lineNos=false}
 int firstElement = numbers[0];
 ```
 
-Static arrays are fixed in size. Once we define them, they have fixed size and they cannot grow or sink at runtime. Some programming languages like Javascript, Python does not have static arrays because they by default offer dynamic arrays. When we define an array, it allocates memory according to the size of the array we define. These memory locations are contiguous in RAM. By default, these memory locations will be filled with junk values in some programming languages like C. Other programming languages like Java, Python, etc initialize these values with default value of the data type. That is zero for integer, `null` for reference type arrays. Each of these elements have indices associated with them. Those are just convenient way to access each element of the array easily. Computer doesn't need to store those indices when we create an array. They just need to know the size and the data type.
+### Updating Elements in array
 
-To declare and initialize a static array in Java, you can use the following syntax:
+To add new element or update an existing element, we can simply reference the index position and assign a new value on the right hand side.
 
-```java
-dataType[] arrayName = new dataType[size];
+```java { lineNos=false }
+numbers[2] = 200;
 ```
 
-In below example, I have initialized an array of `int` type with size 5.
+The above code assigns value `200` to the element at index position `2`, that is the third element of the array.
+There is no delete operation in static array. That means you cannot free up the memory allocated for any index position. You can only modify the values in specific index.
 
-```java
-int[] numbers = new int[5];
-```
-
-We can retrieve the elements of the array using their index position. These elements are zero-indexed. That is the first element is stored at index position 0 and not 1. For example, to retrieve first element, I can use index position 0
-
-```java
-int firstElement = numbers[0];
-```
+### Memory Mapping in an Array
 
 Now, because these elements are stored contiguous and we have fixed size, we can easily find element at a given index. For example, if we declare `int` array of size 4, we have four continuous blocks of memory allocated in RAM. In below diagram, I have represented memory addresses as decimal numbers for illustration. If we know that `int` takes up 4 bytes, we have allocated total of `4 x 4 = 16 bytes`. If the first element address is 1000, the next element will be at `1000 + 4 = 1004` memory address. This is because the memory is allocated in contiguous blocks. Similarly, the element at index position 3 will be at `1000 + (3 x 4 bytes) = 1012`. Let's run through another example, Let's suppose we created an array of size 10 for data type `double`. Each `double` element would require a memory of 4 bytes. So, here we have allocated total of `10 * 8 = 80 bytes`. Let's suppose first element is stored at address 2000. If we want to find the element at index position 5, that would be at address `2000 + 5 * 8 = 2040`. In general, this calculations can be simplified to `firstElementAddress + (indexPosition * DATATYPE_BYTES)`.
 
@@ -62,9 +77,7 @@ Let's see what happens if we want to add a new value at the end of the array. If
 
 ## Dynamic Arrays
 
-Dynamic arrays are dynamic in size. 
-
-Dynamic arrays are resizable arrays that allow for the insertion, deletion, and modification of elements. Unlike static arrays, dynamic arrays can change in size at runtime to accommodate the required number of elements. This makes them a valuable tool for handling collections of data in programs.
+Dynamic arrays are dynamic in size. Dynamic arrays are resizable arrays that allow for the insertion, deletion, and modification of elements. Unlike static arrays, dynamic arrays can change in size at runtime to accommodate the required number of elements. This makes them a valuable tool for handling collections of data in programs.
 
 In this article, we'll explore how dynamic arrays are used in Java, Python, and JavaScript to provide a comprehensive understanding across multiple programming languages.
 
