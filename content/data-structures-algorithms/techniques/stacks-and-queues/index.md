@@ -39,3 +39,27 @@ Another problems is situation where we need LIFO data structure. For example, gi
 [Remove All Duplicates in a String](../../solutions/1047-remove-all-adjacent-duplicates-in-string/)
 
 [Backspace String Compare](../../solutions/0844-backspace-string-compare/)
+
+## Queues
+
+Queue is a FIFO (First In First Out) data structure. That is the element added at first is the one removed first. In a queue, elements are added and removed from the two opposite sides. In practical world, you can think of queue like any queue in daily life. If you're in line for buying movie tickets, the first one standing will be the first one out with the tickets. That's queue.
+
+Adding an element in the queue is called `enqueue` and removing element from a queue is called `deque` operation. It may be difficult to write `Queue` using singly-linked list as it may have only `head` but we want the ability to `enqueue` at `head` but `dequeue` at the `tail`. So, it may be easier to implement Queue using doubly-linked lists.
+
+[Number of Recent Calls](../../solutions/0933-number-of-recent-calls/)
+
+[Moving Average from Data Stream](../../solutions/0346-moving-average-from-data-stream/)
+
+## Monotonic Stack or Queue
+
+A monotonic stack or queue is one where elements are always sorted. It's a property of any object where it either increases or only decreases but not both. The important point with these types of container objects is that they maintain their sorted property by removing elements that violate the property before adding new elements. For example, if our stack had elements `[1,2,3,5,6]` and we wanted to insert value `4` into this stack. It would first remove elements `5` and `6` from the top of the stack and then insert `4`, making it `[1,2,3,4]`. In pseudo code it would look like this.
+
+```pseudocode
+initialize stack
+for elem in numbers:
+    while stack.size > 0 and stack.peek >= num:
+        stack.pop()
+    stack.push(num)
+```
+
+These types of structures are useful when you have a dynamic window of elements and you want to maintain knowledge of the maximum and minimum element as the window changes. It can also be used to solve problems that involve finding 'next' element for each element based on some criteria.
