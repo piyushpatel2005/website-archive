@@ -4,12 +4,12 @@ defaults:
     shell: bash
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '5 4 1,16 * *'
+  # schedule:
+  #   - cron: '5 4 1,16 * *'
   push:
     branches:
       - master
-      # - main
+      - main
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -36,7 +36,7 @@ jobs:
       # checkout full codebase
       ######################################################################
       - name: Checkout repo codebase
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
@@ -65,7 +65,7 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
@@ -79,4 +79,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
