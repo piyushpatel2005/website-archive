@@ -6,6 +6,6 @@ categories: ["Coding Interview"]
 tags: ["Leetcode", "Easy"]
 difficulty: ["Easy"]
 topics: ["Programming"]
-ideas: ["Stacks and Queues"]
+ideas: ["Binary Search"]
 languages: ["Java"]
 ---
