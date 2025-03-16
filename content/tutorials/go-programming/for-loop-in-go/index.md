@@ -14,7 +14,7 @@ Go is very simple and tries to minimize developer errors. For this, Go supports 
 Go syntax for the `for` loop looks like below.
 
 ```go
-for initialize; check_condition; post_iteration {
+for initialization; check_condition; post_iteration {
     ... ...
 }
 
@@ -136,3 +136,5 @@ func main() {
 4
 Breaking out of loop when i is 5
 ```
+
+Go also supports `goto` statement although the usage of `goto` is highly discouraged. The `goto` keyword sends program flow to different location identified by a label without any conditions.
