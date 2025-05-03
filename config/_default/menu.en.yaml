@@ -1,6 +1,55 @@
 main:
-  - name: Documentations
-    identifier: documentations
-    url: https://hbs.razonyang.com/v1/en/docs/
+  - name: Tutorials
+    identifier: tutorials
+    url: /tutorials/
+    weight: 1
     params:
       icon: '<i class="fas fa-fw fa-book"></i>'
+  - name: Interview Prep
+    identifier: interview-prep
+    url: /interview-prep/
+    weight: 2
+    params:
+      icon: '<i class="fas fa-fw fa-user-graduate"></i>'
+  - name: Data Structures
+    identifier: data-structures
+    url: /data-structures-algorithms/data-structures/
+    weight: 1
+    parent: interview-prep
+    params:
+      icon: '<i class="fas fa-fw fa-database"></i>'
+  - name: Algorithms
+    identifier: algorithms
+    url: /data-structures-algorithms/techniques/
+    weight: 2
+    parent: interview-prep
+    params:
+      icon: '<i class="fas fa-fw fa-code"></i>'
+  - name: Coding Problems
+    identifier: coding-problems
+    url: /data-structures-algorithms/solutions/
+    weight: 3
+    parent: interview-prep
+    params:
+      icon: '<i class="fas fa-fw fa-code"></i>'
+  - name: High Level System Design
+    identifier: high-level-system-design
+    url: /high-level-design/
+    weight: 4
+    parent: interview-prep
+    params:
+      icon: '<i class="fas fa-fw fa-cogs"></i>'
+  - name: Low Level System Design
+    identifier: low-level-system-design
+    url: /low-level-design/
+    weight: 5
+    parent: interview-prep
+    params:
+      icon: '<i class="fas fa-fw fa-cogs"></i>'
+  - name: Blogs
+    identifier: blogs
+    url: /posts/
+    weight: 3
+    params:
+      icon: '<i class="fas fa-fw fa-blog"></i>'
+  

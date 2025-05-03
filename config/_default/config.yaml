@@ -1,5 +1,5 @@
-baseURL: https://hbs-skeleton.netlify.app/
-title: Hugo Bootstrap Skeleton
+baseURL: https://piyushpatel.vercel.app/
+title: Piyush Patel
 copyright: 'Copyright © 2016-{year} Razon Yang. All Rights Reserved.'
 defaultContentLanguage: en
 # hasCJKLanguage: true # Uncomment it if your content contains Chinese/Japanese/Korean Languages.
@@ -9,7 +9,7 @@ defaultContentLanguage: en
 #  - zh-cn
 #  - zh-tw
 pagination:
-  pagerSize: 10
+  pagerSize: 5
 # paginatePath: page
 enableRobotsTXT: true
 enableEmoji: true
