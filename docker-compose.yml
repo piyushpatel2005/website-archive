@@ -1,0 +1,9 @@
+services:
+  server:
+    image: hugomods/hugo:exts-0.127.0
+    command: hugo server --bind 0.0.0.0 --disableFastRender -D
+    volumes:
+      - ./:/src
+      - ~/hugo_cache:/tmp/hugo_cache
+    ports:
+      - "1313:1313"
