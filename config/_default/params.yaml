@@ -7,8 +7,8 @@ mainSections:
 
 # titleSeparator: '|' # Title separator. Default to -.
 
-description: An extreme fast, responsive and feature-rich blog theme for Hugo
-keywords: Hugo, Bootstrap, Blog Theme
+description: One stop shop for all technology content
+keywords: technology, interview, coding, preparation, cloud, programming, python, javascript, java, go, rust, data, snowflake, spark, SQL
 # images:
 #   - site-feature-image.jpg
 
@@ -63,7 +63,7 @@ googleAdsense:
 # recentPostCount: 10 # The number of recent posts shown in sidebar. Turn off by setting it to false.
 # relatedPostCount: 10 # The number of related posts. Turn off by setting it to false.
 # categoryCount: 10 # The number of categories shown in sidebar. Turn off by setting it to false.
-# tagCount: 10 # The number of tags shown in sidebar. Turn off by setting it to false.
+tagCount: 25 # The number of tags shown in sidebar. Turn off by setting it to false.
 # seriesCount: 20 # The number of series shown in sidebar. Turn off by setting it to false.
 # taxonomyPaginate: 5 # Default to 10.
 taxonomyPostCount: 20 # The number of taxonomy's posts. Turn off by setting it to false.
@@ -101,12 +101,12 @@ sidebar:
   # collapsed: true # Collapse sidebar widgets by default on small screens.
 
 codeBlock:
-  # maxLines: 8
+  maxLines: 80
   lineNos: true # true/false represents that show/hide the line numbers by default.
 
 post:
-  # excerpt: description
-  # excerptMaxLength: 120
+  excerpt: description
+  excerptMaxLength: 80
   # copyright: false # Whether to display copyright section on each post.
   # plainifyExcerpt: false # Format excerpt in HTML if false.
   featuredImage: true # Show the featured image above the content.
@@ -122,7 +122,7 @@ post:
   # readMoreFromContent: true
 
 archive:
-  paginate: 20 # Archive pagination. Default to 100.
+  paginate: 10 # Archive pagination. Default to 100.
   # basePath = "/archiv" # The base path of archive pages.
   # dateFormat: 01-02 # Archive date format. Default to Jan 2.
 
@@ -153,13 +153,13 @@ creativeCommons:
   # Optional values: github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
   #theme:  
 
-#staticman:
+staticman:
   #endpoint: https://yourstaticmaninstance # Required, replace with your own Staticman instance.
   #repo: user/repo # Required
   #service: github # or gitlab. Default to GitHub.
   #branch: main # Default to master.
   #property: comments # Default to comments.
-  #sorting: desc # Default to asc.
+  sorting: desc # Default to asc.
   #reCaptchaKey: "" # The reCaptcha site key.
   #reCaptchaSecret: "" # The reCaptcha encrypted secret. You'll need to encrypt plain secret via https://yourstaticmaninstance/v3/encrypt/PLAINSECRET.
   #extraFields: # Extra fields. Available fiedls: url.
@@ -171,11 +171,11 @@ creativeCommons:
   #moderation: false # Same as Staticman's moderation.
 
 # See https://giscus.app
-giscus:
-  repo: "razonyang/hugo-theme-bootstrap-skeleton" # required.
-  repoId: "R_kgDOHJi95g" # required.
-  category: "General" # required.
-  categoryId: "DIC_kwDOHJi95s4CTy6q" # required.
+# giscus:
+#   repo: "razonyang/hugo-theme-bootstrap-skeleton" # required.
+#   repoId: "R_kgDOHJi95g" # required.
+#   category: "General" # required.
+#   categoryId: "DIC_kwDOHJi95s4CTy6q" # required.
   # theme: "dark" # Default to auto.
   # mapping: "title" # Default to pathname.
   # inputPosition: "bottom" # Default to top.
@@ -255,12 +255,12 @@ repo:
   # subPath: exampleSite
   # dateFormat: 02/01/2006, 15:04:05 PM
 
-topAppBar:
+# topAppBar:
   # See https://hbs.razonyang.com/v1/en/docs/widgets/social-links/.
-  social:
-    github: razonyang/hugo-theme-bootstrap
-    patreon: razonyang
-    paypal: razonyang
+  # social:
+  #   github: razonyang/hugo-theme-bootstrap
+  #   patreon: razonyang
+  #   paypal: razonyang
 
 docs:
   nav:
@@ -276,51 +276,51 @@ social:
   facebook: yourfacebookusername
   github: razonyang/hugo-theme-bootstrap
   gitlab: yourgitlabusername
-  linkedin: yourlinkedinusername
-  xing: yourxingusername
-  stackoverflow: yourstackoverflowuserid
-  twitter: yourtwitterusername
-  weibo: yourweibousername
-  zhihu: yourzhihuusername
-  instagram: yourinstagramusername
-  quora: yourquorausername
-  tumblr: yourtumblrusername
-  reddit: yourredditusername
-  telegram: yourtelegramusername
-  qq: yourqqnumber
-  dockerhub: yourdockerhubusername
-  bitbucket: yourbitbucketworkspaceid
-  kaggle: yourkaggleusername
-  medium: yourmediumusername # Medium username or custom domain(e.g. https://custom.domain.tld).
-  lastfm: yourlastfmusername
-  bilibili: yourbilibiliuserid
-  youtube: youryoutubechannelid
-  discord: yourdiscordinvitecode
-  discourse: https://yourforum.tld
-  facebookgroup: yourfacebookgroupname
-  tiktok: yourtiktokusername
-  pinterest: yourpinterestusername
-  mastodon: yourmastodonusername
-  liberapay: yourliberapayaccount
-  paypal: razonyang
-  patreon: razonyang
-  tipeee: yourtipeeeaccount-fr
+  # linkedin: yourlinkedinusername
+  # xing: yourxingusername
+  # stackoverflow: yourstackoverflowuserid
+  # twitter: yourtwitterusername
+  # weibo: yourweibousername
+  # zhihu: yourzhihuusername
+  # instagram: yourinstagramusername
+  # quora: yourquorausername
+  # tumblr: yourtumblrusername
+  # reddit: yourredditusername
+  # telegram: yourtelegramusername
+  # qq: yourqqnumber
+  # dockerhub: yourdockerhubusername
+  # bitbucket: yourbitbucketworkspaceid
+  # kaggle: yourkaggleusername
+  # medium: yourmediumusername # Medium username or custom domain(e.g. https://custom.domain.tld).
+  # lastfm: yourlastfmusername
+  # bilibili: yourbilibiliuserid
+  # youtube: youryoutubechannelid
+  # discord: yourdiscordinvitecode
+  # discourse: https://yourforum.tld
+  # facebookgroup: yourfacebookgroupname
+  # tiktok: yourtiktokusername
+  # pinterest: yourpinterestusername
+  # mastodon: yourmastodonusername
+  # liberapay: yourliberapayaccount
+  # paypal: razonyang
+  # patreon: razonyang
+  # tipeee: yourtipeeeaccount-fr
 
 author:
-  name: Razon Yang
+  name: Piyush Patel
   # avatar: images/profile.png # Avatar image. Default to "images/profile.webp".
-  bio: 'Gopher, PHPer, Full Stack Engineer.'
-  company: Company # HTML markup are supported, such as: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Company</a>.
-  location: Earth # HTML markup are supported, such as: <a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>.
+  bio: 'Data Engineer, AI Enthusiast, Full Stack Engineer.'
+  # company: Company # HTML markup are supported, such as: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Company</a>.
+  # location: Earth # HTML markup are supported, such as: <a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>.
   # about: https://razonyang.com # The external about page. The internal about page will be used if not set.
   params: {
     # layout: compact
   }
   # See https://hbs.razonyang.com/v1/en/docs/widgets/social-links/.
-  social:
-    email: razonyang@gmail.com
-    github: razonyang/hugo-theme-bootstrap
-    twitter: razonyang
-    patreon: razonyang
-    paypal: razonyang
-    rss: "" # Remove RSS
+  # social:
+  #   email: razonyang@gmail.com
+  #   github: razonyang/hugo-theme-bootstrap
+  #   twitter: razonyang
+  #   patreon: razonyang
+  #   paypal: razonyang
+  #   rss: "" # Remove RSS

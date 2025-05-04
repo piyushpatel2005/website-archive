@@ -1,6 +1,6 @@
 baseURL: https://piyushpatel.vercel.app/
 title: Piyush Patel
-copyright: 'Copyright © 2016-{year} Razon Yang. All Rights Reserved.'
+copyright: 'Copyright © 2023-{year} Piyush Patel. All Rights Reserved.'
 defaultContentLanguage: en
 # hasCJKLanguage: true # Uncomment it if your content contains Chinese/Japanese/Korean Languages.
 # defaultContentLanguageInSubdir: true
@@ -30,6 +30,8 @@ build:
 permalinks:
   news: /news/:year/:month/:title/
   blog: /blog/:year/:month/:title/
+  tutorials: /tutorials/:sections[1:]/:slugorfilename
+  posts: /blog/:slugorfilename
 
 module:
   imports:
