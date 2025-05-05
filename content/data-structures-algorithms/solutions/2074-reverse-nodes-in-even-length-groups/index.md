@@ -35,7 +35,7 @@ Explanation:
 - The length of the last group is 4, which is even, hence the nodes are reversed.
 ```
 
-![Example 1](./example1.png "Example 1 for Reverse Nodes in Even Length Groups")
+![Example 1](example1.png "Example 1 for Reverse Nodes in Even Length Groups")
 
 ### Example 2:
 
@@ -48,7 +48,7 @@ Explanation:
 - The length of the last group is 1. No reversal occurs.
 ```
 
-![Example 2](./example2.png "Example 2 for Reverse Nodes in Even Length Groups")
+![Example 2](example2.png "Example 2 for Reverse Nodes in Even Length Groups")
 
 ### Example 3:
 
@@ -61,7 +61,7 @@ Explanation:
 - The length of the last group is 2. The nodes are reversed.
 ```
 
-![Example 3](./example3.png "Example 3 for Reverse Nodes in Even Length Groups")
+![Example 3](example3.png "Example 3 for Reverse Nodes in Even Length Groups")
 
 ### Constraints:
 

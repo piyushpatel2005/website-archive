@@ -13,7 +13,7 @@ Object-oriented programming (OOP) is a programming paradigm based on the idea of
 
 Below is a UML diagram which represents a very simple class `Person`. UML digrams are a way to represent low level design in the diagram. It depicts aspects of each class with their member variables and methods.
 
-![Simple Person class UML diagram](./simple-class.jpg "UML diagram of Person class")
+![Simple Person class UML diagram](simple-class.jpg "UML diagram of Person class")
 
 In this class, at the top we have class name `Person` which has three data members: `name`, `birthDate` and `address`. Each of them have their data type defined separated by colon (`:`) symbol. The bottom section has the methods defined in this class which in this case are `walk()`, `eat()` and `breathe()`. In the upcoming tutorial, we will learn more about UML diagrams and how they can represent different class states.
 

@@ -91,9 +91,7 @@ To delete a user account, use the `userdel` command:
 sudo userdel <username>
 ```
 
-{{< admonition "warning" >}}
-Be cautious as this action permanently deletes the user's files and directories.
-{{</ admonition >}}
+> Be cautious as this action permanently deletes the user's files and directories.
 
 **Example:**
 
