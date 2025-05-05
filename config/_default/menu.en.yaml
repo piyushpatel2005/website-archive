@@ -7,48 +7,48 @@ main:
       icon: '<i class="fas fa-fw fa-book"></i>'
   - name: Interview Prep
     identifier: interview-prep
-    url: /interview-prep/
+    url: /data-structures-algorithms
     weight: 2
     params:
       icon: '<i class="fas fa-fw fa-info-circle"></i>'
   - name: Data Structures
     identifier: data-structures
-    url: /data-structures-algorithms/data-structures/
+    url: /data-structures-algorithms/data-structures
     weight: 1
     parent: interview-prep
     params:
       icon: '<i class="fas fa-fw fa-sd-card"></i>'
   - name: Algorithms
     identifier: algorithms
-    url: /data-structures-algorithms/techniques/
+    url: /data-structures-algorithms/techniques
     weight: 2
     parent: interview-prep
     params:
       icon: '<i class="fas fa-fw fa-code"></i>'
   - name: Coding Problems
     identifier: coding-problems
-    url: /data-structures-algorithms/solutions/
+    url: /data-structures-algorithms/solutions
     weight: 3
     parent: interview-prep
     params:
       icon: '<i class="fas fa-fw fa-code"></i>'
   - name: High Level System Design
     identifier: high-level-system-design
-    url: /high-level-design/
+    url: /high-level-design
     weight: 4
     parent: interview-prep
     params:
       icon: '<i class="fas fa-fw fa-database"></i>'
   - name: Low Level System Design
     identifier: low-level-system-design
-    url: /low-level-design/
+    url: /low-level-design
     weight: 5
     parent: interview-prep
     params:
       icon: '<i class="fas fa-fw fa-cog"></i>'
   - name: Blogs
     identifier: blogs
-    url: /posts/
+    url: /posts
     weight: 3
     params:
       icon: '<i class="fas fa-fw fa-blog"></i>'

@@ -30,8 +30,8 @@ build:
 permalinks:
   news: /news/:year/:month/:title/
   blog: /blog/:year/:month/:title/
-  tutorials: /:sections[1:]/:slugorfilename
-  posts: /blog/:slugorfilename
+  tutorials: /tutorials/:sections[1:]/:slugorcontentbasename
+  posts: /blog/:slugorcontentbasename
 
 module:
   imports:

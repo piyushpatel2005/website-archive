@@ -62,7 +62,7 @@ print(factorial(5)) # 120
 
 When we actually execute this code, each recursive call add a function call on the stack as shown in the diagram below.
 
-![Recursion Function Execution](./recursion.PNG "Recursive Function call Example")
+![Recursion Function Execution](recursion.PNG "Recursive Function call Example")
 
 This means if the size of the problem is very large, it can take up lots of stack space and that's when it can result in `StackOverflowError`. Stack is actual memory in your system where temporary variables and functions are stored until the execution of a function. As each function finish execution, it's variables are cleaned up from stack memory.
 

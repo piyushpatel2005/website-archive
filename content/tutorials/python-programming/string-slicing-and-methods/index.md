@@ -63,7 +63,7 @@ str[4] # 'o'
 ```
 
 We can also negatively index string from the end of the string.
-![String Indexing](./string_indexing.jpg)
+![String Indexing](string_indexing.jpg)
 
 In above image, the last character in word `Hello` can be referenced using index position `4` or `-1`
 
