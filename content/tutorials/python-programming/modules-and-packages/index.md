@@ -9,7 +9,7 @@ Python modules are code files which contains functions, classes and other constr
 <!--more-->
 ## Overview
 
-Modules and Packages are techniques to segregate our codebase into manageable pieces. Writing \packages_folder.PNGsingle huge monolithic file for our system may be very complicated and difficult to manage. So, we should try to minimize our code to manageable files.
+Modules and Packages are techniques to segregate our codebase into manageable pieces. Writing single huge monolithic file for our system may be very complicated and difficult to manage. So, we should try to minimize our code to manageable files.
 
 Python modules and packages help with this. We name modules and packages in a sensible way so that they are easy to identify. In simple terms, modules are Python source files and packages are directories of Python source files.
 
@@ -92,7 +92,7 @@ Packages are like folders which contain different modules. This literally means 
 
 The package must have `__init__.py` file in them to make them module.
 
-![Package folder structure](./packages_folder.PNG "Sample Package Directory Structure")
+![Package folder structure](packages_folder.PNG "Sample Package Directory Structure")
 
 From above directory structure, we have two packages, one top level package `my_package` and one package inside this one, `package1`. Each package will have its own `__init__.py` file in them. This file may sometimes include some startup code for initialization.
 

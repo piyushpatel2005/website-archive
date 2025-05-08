@@ -1,5 +1,6 @@
 # Generated files by hugo
 /public/
+node_modules/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
@@ -13,3 +14,4 @@ hugo.linux
 /.hugo_build.lock
 main*
 .vercel
+playground.md

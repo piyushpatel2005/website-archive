@@ -5,12 +5,35 @@ draft: false
 ---
 
 There are various occassions when we have to print values or variables to show to users. Similarly, there will be situations when we want to respond to user input in different ways. For this, we have to have a ability to take user input and flexibility to provide different output. This lesson teaches **how to take user input** and different **ways to format string output**.
+<!--more-->
 
 ## Taking User Input
 
+Before I show how to take user input, I would like to show how we can see the memory address for a variable.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	name := "Bob"
+	fmt.Println(&name)
+}
+```
+
+Above code has a new operator `&`. We can access the memory address of the variable using this operator. So, when we execute this code, we get below result. This result will be different when you execute in your system. This is essentially the memory location where the `name` variable value is stored.
+
+```shell{.show-prompt lineNos=false}
+go run main.go
+0xc000014080
+```
+
+This operator `&` is called **address of** operator. We can use this to assign values to a variable.
+
 ### Scanf Function
 
-In Golang, we can take user input from the terminal using `Scanf` function in `fmt` module. [Scanf function] takes format string along with variable number of arguments into which the input values will be stored. Interestingly, in Go, usually functions return multiple values. This is one such function where it returns two values: number of variables assigned and error if any during assignment.
+In Golang, we can take user input from the terminal using `Scanf` function in `fmt` module. [Scanf function] takes format string along with variable number of arguments into which the input values will be stored. This function scans successive arguments from the stdin which are space separated and as specified by the format specifier. Interestingly, in Go, usually functions return multiple values. This is one such function where it returns two values: number of variables assigned and error if any during assignment.
 
 ```go{ filename="main.go" }
 package main
@@ -35,6 +58,7 @@ Hello Jay
 ```
 
 In this case, we specified that `name` variable should be of type string using format specifier `%s`. Also, when assigning values, we use `&` before the variable name. This will become clearer in the Pointers lesson in this tutorial. Let's look at some of the most common format specifiers.
+
 
 ### Format Specifiers
 

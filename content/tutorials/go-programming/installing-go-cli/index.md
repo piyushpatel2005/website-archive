@@ -44,5 +44,6 @@ Let's learn about few of the Go commands. While running them, make sure to prefi
 | test | Used to test packages |
 | build | Compile packages and dependencies |
 | version | Prints Go version |
+| fmt | Format Go code |
 
 
