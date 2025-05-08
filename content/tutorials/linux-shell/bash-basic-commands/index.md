@@ -82,9 +82,7 @@ The `rm` command is used to remove specified files or directories.
 - Usage:
     - Remove a file: `rm file.txt`
 
-{{< admonition "warning" >}}
-Be cautious when using this command as it permanently deletes files.
-{{</ admonition >}}
+> Be cautious when using this command as it permanently deletes files.
 
 ### `rmdir`: Remove directory
 The `rmdir` command is used to remove empty directories in the Linux shell.
@@ -92,9 +90,7 @@ The `rmdir` command is used to remove empty directories in the Linux shell.
 - Usage:
     - Remove empty directory: `rmdir dirname`
     
-{{< admonition "tip" >}}
-`rmdir` command removes only empty directory. If directory contains files or other directories, to remove all sub-directories, we have to use `rm -r` to recursively remove all contents within the directory.
-{{</ admonition >}}
+> `rmdir` command removes only empty directory. If directory contains files or other directories, to remove all sub-directories, we have to use `rm -r` to recursively remove all contents within the directory.
 
 ### `mv` Move or Rename
 The `mv` command is used to move or rename files. This command cane be used to rename by moving the file to a file with different name.

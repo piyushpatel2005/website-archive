@@ -31,6 +31,8 @@ Arithmetic operators are used to perform arithmetic operations on operands.
 | `++` | Unary increment by 1 |
 | `--` | Unary decrement by 1 |
 
+> **Note:** Please note that those unary operators can be used only as *postfix* operators. Other languages like C, C++, Java, support both postfix and prefix operators which can be used as `a++` or `++a`. Go does not support *prefix* unary operators.
+
 ```go
 package main
 
@@ -67,7 +69,35 @@ After i++ : 11
 After i-- : 10
 ```
 
-## Comparison Operators
+> **Note:** Go does not support implicit type conversion. If we want compiler to convert the type, we have to specify that explicitly. Other languages like C, C++, Java, support implicit type conversion (coersion), but not Go.
+
+This means that we cannot mix types in these operators. For example, we cannot perform addition of two variables which are of types `int` and `int32` or `int` and a `byte` or `int` and `float`. Below operations give compile error.
+
+```go
+func main() {
+	var aInt int = 10
+	var aInt32 int32 = 10
+	var aFloat32 float32 = 10.2
+	var aFloat64 float64 = 10.2
+	var aByte byte = 5
+	fmt.Println("aInt + aInt32:", aInt + aInt32)
+	fmt.Println("aInt + aByte:", aInt + aByte)
+	fmt.Println("aInt + aFloat32:", aInt + aFloat32)
+	fmt.Println("aFloat32 + aFloat64:", aFloat32 + aFloat64)
+}
+```
+
+The solution is to do type conversion explicitly to the required data type before performing operations.
+
+The order of these operators depend on type of operations. If we combine multiple operations in single statement, we have to be careful. For example, in below snippet, we cannot easily imagine whether `a + b` will happen first or `b * c`. The order of operations are defined by [PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations) if you ever encounter such code.
+
+```go{lineNos=false}
+result = a + b * c
+```
+
+Ideally, you should avoid writing such statements to be clear about what you intend to do. So, above statement can be written as `result = (a + b) * c` if we intededed to perform this operation.
+
+## Comparison/Relational Operators
 These are used to compare two values or variables.
 
 | Operator | Description |

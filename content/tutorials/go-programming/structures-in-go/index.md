@@ -9,7 +9,7 @@ Structures are one of the ways to organize data into structured data structure. 
 
 ## Overview
 
-Structure is a user-defined data type which groups several data elements for related entity. This allows to store multiple values of different data types under single variable name. For example, a person may have name, address, citizenship, security number, etc. So, we can create a struct for Person and it can include all these information for a person under single variable. 
+Structure is a user-defined data type which groups several data elements for related entity. This allows to store multiple values of different data types under single variable name. They allow you to create complex data types in Go. For example, a person may have name, address, citizenship, security number, etc. So, we can create a struct for Person and it can include all these information for a person under single variable. 
 
 ## Define and Initialize Structure
 
@@ -43,6 +43,8 @@ func main() {
 	fmt.Printf("%v\n", pt)
 }
 ```
+
+By default, if we do not assign a value to fields of a struct, they will have zero value for their respective data type.
 
 **Output:**
 
@@ -116,6 +118,26 @@ It is also possible to omit the field name and the values will be assigned in th
 ```go
 pt := Point{1, 2}
 fmt.Printf("%+v", pt) // {x:1 y:2}
+```
+
+The problem with these types of assignment is if the types do not match the declaration, it will give compile error. For example, in below code, we have `Student` struct, but the type of `id` do not match the declaration of the struct while assigning `student2` variable. So, it gives compile error.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	student1 := Student{1, "Andrew"}
+	fmt.Printf("%+v\n", student1)
+	student2 := Student("Anita", 2) // gives error
+	fmt.Printf("%+v\n", student2) 
+}
+
+type Student struct {
+	id   int
+	name string
+}
 ```
 
 ## Accessing Struct Fields
@@ -268,9 +290,9 @@ false
 true
 ```
 
-## Define Structure Methods
+## Define Methods for Struct
 
-In Go, we have methods which are defined differently. A method is something that augments a function with an extra parameter that specifies the receiver. This argument is added right after `func` keyword and it accepts only one argument. This is called a receiver. A method is a function that has a defined receiver. This ensures that any instance of `Person` struct will have `name` method available with them. This method is called with a dot operator after the struct variable.
+In Go, we have methods which are defined differently. A method is something that augments a function with an extra parameter that specifies the receiver. This argument is added right after `func` keyword and it accepts only one argument. This is called a receiver. A method is a function that has a defined receiver. This ensures that any instance of `Person` struct will have `name` method available with them. This method is called with a dot operator after the struct variable. These methods are very similar to methods used in object-oriented programming. Go does not have classes like other OOP languages.
 
 **Example:**
 
@@ -303,7 +325,7 @@ func (p Person) name() string {
 }
 ```
 
-Here, the struct variable is passed by value. So, it does not modify the original fields of the structure.
+Here, the method `name()` has a receiver type of `Person` in the method declaration. Within the method, you can have access to fields of a struct. In this method, we are using `firstName` and `lastName` fields from the struct. The struct variable is passed by value. So, it does not modify the original fields of the structure.
 
 **Output:**
 

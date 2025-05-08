@@ -10,7 +10,7 @@ In this tutorial, we will take a look at very basic syntax of Go programming lan
 
 ## Simple Go Program
 
-Go is relatively very simple in reading compared to C, C++ code. It feels more like Python. Let's take an example code. Create a new file in your computer with file name, `main.go` and add below content into it.
+Go is relatively very simple in reading compared to C, C++ code. It feels more like Python. Let's take an example code. Create a new directory `go-learning` and navigate or open that directory using your text editor. Create a new file in your computer with file name, `main.go` and add below content into it.
 
 ```go
 package main
@@ -31,6 +31,16 @@ On line 6, we have single statement `fmt.Println("Hello World")`. This uses our 
 
 ### Execute Our Program
 
+#### 1. Compile and Run
+
+There are couple of ways I am going to show how you can execute Go code.
+1. Open your terminal and navigate to this `go-learning` directory. You should have `main.go` file created with above code.
+2. Enter `go build main.go` command. This will compile your go code and build a executable binary file.
+3. Next this binary file can be shipped to another person or system to execute on their system. To run this, type `./main` on UNIX based systems or `main.exe` on Windows.
+
+#### 2. Another Run option
+
+While learning, building and running Go code can be little bit of a hassle, so we can use `go run` to execute the code interactively.
 ```bash{ .show-prompt lineNos=false }
 go run main.go
 ```
@@ -38,15 +48,15 @@ go run main.go
 Hello World
 ```
 
-{{< admonition note >}}
-In above execution, `$` symbol is used as a prompt representation. You do not need to actually write that. Actual command is `go run main.go` but `$` is there only for representation.
-{{< /admonition >}}
+> In above execution, `$` symbol is used as a prompt representation. You do not need to actually write that. Actual command is `go run main.go` but `$` is there only for representation.
 
 ## Experiment with Code
 
 There is also another function in `fmt` package called `Printf`. Let's replace `Println` function with `Printf` and see the output after execution.
 
-In below code, we also added **comments**. Comments are used in code to write meaningful information about program logic. We have two kinds of comments *single line comment* which can be on only one line and starts with `//` in Go. We also have *multi-line comment* which can span multiple lines and starts with `/*` and ends with `*/` as shown in this code. Whatever we write in comment, gets ignored by the compiler.
+### Comments
+
+Comments are used for documenting code by developers. In below code, we also added **comments**. Comments are used in code to write meaningful information about program logic. We have two kinds of comments *single line comment* which can be on only one line and starts with `//` in Go. We also have *multi-line comment* which can span multiple lines and starts with `/*` and ends with `*/` as shown in this code. Whatever we write in comment, gets ignored by the compiler.
 
 ```go
 package main
@@ -99,3 +109,21 @@ go run main.go
 ```{ lineNos=false }
 Hello John$
 ```
+
+## Formatting Go Code
+
+A point to note about Go source files is that, we do not need these indentations, we can write everything in single line and run the code, it will still work fine. However, this will be very hard to read for any humans. Computers won't find any difficulty understanding the Golang syntax.
+
+If you're working on a text editor that does not automatically format your code, you can use go utility to format the code. For example, if I had a code which is not indented properly, I can simply use `go fmt` command to reformat my code.
+
+```go
+package main
+import "fmt"
+func main() {
+fmt.Println("Hello World")
+}
+```
+
+Just type above code which is not properly indented and enter `go fmt main.go` command. This will auto-format your Go code and save the file.
+
+Go is also case-sensitive. That means if by mistake we type `fmt.println` instead of `fmt.Println`, the Go code will not compile and will give us error. So, we have to be careful with the case here.

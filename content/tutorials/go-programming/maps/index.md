@@ -40,7 +40,7 @@ func main() {
 }
 ```
 
-To create a map with key-value pairs we also have to initialize it with key-value pairs.
+To create a map with key-value pairs we also have to initialize it with key-value pairs. In above code, we declared an empty map, this assigns a value `nil` to `employees` map. Although we can print empty map, we cannot assign a key to this map. If we actually want to create empty map, we have to use `make` function.
 
 **Example:**
 
@@ -74,7 +74,7 @@ func main() {
 }
 ```
 
-We can also declare and initialize a map with make function. We can also assign new key-value pairs using assignment operator as shown in line `9` below.
+We can also declare and initialize a map with make function. We can also assign new key-value pairs using assignment operator as shown in line `9` below. This is how we can create empty map and still be able to assign key-value pairs later.
 
 ```go
 package main
@@ -97,10 +97,22 @@ map[]
 map[one:1]
 ```
 
-**Output:**
+We cannot assign duplicate keys while initializing a map.
 
-```output{ lineNos=false }
-map[1:hi 2:hello 3:there 4: 5:]
+```go
+package main
+
+import "fmt"
+
+func main() {
+	m := map[string]int{
+		"one":   1,
+		"two":   2,
+		"three": 3,
+		"one":   100,
+	} // duplicate key "one" in map literal
+	fmt.Println(m)
+}
 ```
 
 ## Accessing elements of a Map in Go
@@ -125,6 +137,24 @@ func main() {
 1
 ```
 
+If we try to access a key which doesn't exist in the map, we get zero value for that specific data type.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	m := map[string]int{
+		"one":   1,
+		"two":   2,
+		"three": 3,
+	}
+	fmt.Println(m["ten"]) // 0
+}
+```
+
+To avoid getting incorrect zero value, we should always make sure to check if the key exists in the map.
 When getting values, we get value and a boolean flag if the key exists or not. If key doesn't exist, the first value will be zero value. This we can use with conditionals to verify if a key exists and if exists, get the value else do something else.
 
 ```go
@@ -139,6 +169,13 @@ func main() {
 
 	value, found = numbers["four"]
 	fmt.Println(found, value)
+
+    value, found = numbers["ten"]
+    if found {
+        fmt.Println("Value for numbers['ten']", value)
+    } else {
+        fmt.Println("Key 'ten' does not exist.")
+    }
 }
 ```
 
@@ -146,6 +183,7 @@ func main() {
 ```output{ lineNos=false }
 true 3
 false 0
+Key 'ten' does not exist.
 ```
 
 We can assign new key-value pairs using `map_name[key] = value` syntax as you've already seen. However, if we try to assign the existing key with a new value, it will simply overwrite existing values.

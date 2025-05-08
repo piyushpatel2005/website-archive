@@ -5,6 +5,9 @@ draft: false
 ---
 
 Let's take a look at variables and data types available in Go programming language. We will cover primitive data types and complex data types briefly and see different options for variable declaration.
+<!--more-->
+
+Variables are identifiers which reference memory address where the actual value assigned to the variable is stored. When we use this variable, the compiler uses this named memory address to retrieve the value stored at that address.
 
 ## Variable Declarations
 
@@ -13,6 +16,8 @@ There are several ways to declare and initialize variables in Go. Go has several
 ```go
 var <variable_name> <data_type>
 ```
+
+Whenever you create a variable, you must include its type, either explicitly or by assigning a value from which the compiler will identify the type of the variable. Also variables are also identifiers so they follow naming rules. They must start with a letter or underscore followed by letters, numbers or underscores.
 
 Above syntax only declares the variables and do not assign any specific values. For example, in below code we declare variables of type `int`, `string`, `float32` and `bool`. We will learn about this data types later in this lesson.
 
@@ -56,9 +61,11 @@ go run main.go
 false
 ```
 
+We can also declare multiple variable in a single line using `var name, email string` format. In this statement, both `name` and `email` are declared to be of type `string` in the same line.
+
 ## Variable Initialization
 
-We can also provide specific value to a variable when we declare a variable. This is called initialization. We can do that like below where we use assignment operator (`=`) to assign value on the right side to the variable.
+We can also provide specific value to a variable when we declare a variable. This is called initialization or assignment. We can do that like below where we use assignment operator (`=`) to assign value on the right side to the variable.
 
 ```go
 var id int = 5
@@ -68,6 +75,7 @@ var name string = "Jack"
 We can also declare multiple variables in single statement as long as their data types are same. For example, in below code, on line 11, we declare and initialize two variables `a` and `b` with values 20 and 30. We can also print two variables together by separating those variables with comma (`,`) in `fmt.Println` function as shown in line 18.
 
 **Example:**
+
 ```go{ filename="main.go" }
 package main
 
@@ -105,7 +113,9 @@ true
 
 ### Shorthand assignment
 
-There is another shorthand notation for declaring and initializing values to the variable using `:=` operator. This is used only for initialization of the variable and once initialized, we have to use assignment operator (`=`) to modify variable's value. This is generally the preferred method for declaring and initializing variables in Go community.
+So far, the kind of variable assignments above were of static type. That is we specify the type of the variable to the compiler before assigning the value. Go supports dynamic style typing as well where we do not specify the type of the variable like Python or Ruby. However, Go is still statically typed language, so compiler does that extra work for you to infer the data type of the variable. For this we use shorthand assignment.
+
+Shorthand notation for declaring and initializing values to the variable uses `:=` operator. This is used only for initialization of the variable and once initialized, we have to use assignment operator (`=`) to modify variable's value. This is generally the preferred method for declaring and initializing variables in Go community.
 
 ```go
 a := 10
@@ -163,6 +173,14 @@ go run main.go
 ./main.go:8:9: cannot use "Hello" (untyped string constant) as int value in assignment
 ```
 
+## Variable Scopes
+
+Variable scope defines what part of the program can access the variables defined. Go has two types of variable scopes
+1. Local scope: These are accessible within the block of code or function where the variable is defined.
+2. Global scope: These are usually declared at the beginning of the source file, outside of any block or function. These are accessible anywhere in the program.
+
+It's always advisable to use local variables rather than global unless there is specific reason you need the value across the whole source file.
+
 ## Constants
 
 Constants are like variables however once initialized, the value cannot be modified. These are declared using `const` keyword. We cannot declare a constant without initializing a value, i.e. the value cannot be assigned later or zero value does not apply to constants. Also, shorthand variable assignment does not apply to constants. They will usually have a global scope. The basic syntax for constants look like this.
@@ -199,6 +217,8 @@ As we saw in examples above that we have data types for primitive types like int
 | complex128 | complex number with 64-bit real and imaginary parts |
 | bool | boolean |
 | rune | same as int32 |
+
+Go support `int`, `uint` and `uintptr` which are implementation-specific types. Their allowed min and max range depends on the computer architecture. If the code is running on 32-bit architecture then `int` type will be of 32-bit integer. If the code is running on 64-bit architecture, the range will be 64-bit integer range.
 
 There are also other container data types which we will discuss in lot more detail in this tutorial series. These are arrays, slices, maps and structs. Below table gives brief idea about those, but we will see their examples throughout the tutorials.
 

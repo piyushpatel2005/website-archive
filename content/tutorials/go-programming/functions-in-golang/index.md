@@ -22,7 +22,7 @@ So far we have seen various data structures in Go. This lesson explains what fun
 In Golang, functions are defined using `func` keyword. The function can take parameters and can also optionally return a value from inside the function. General syntax for definition of a function looks like this.
 
 ```go
-func <func_name>(<params>) <return_type> { // function signature
+func <func_name>(argument type, ...) <return_type> { // function signature
     // statements, function body
     return <return_type>
 }

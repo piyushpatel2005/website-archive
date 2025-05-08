@@ -41,7 +41,7 @@ func main() {
 
 **Output:**
 ```output{ lineNos=false }
-1 2 3 4]
+1 2 3 4
 ```
 
 With such initialization, first an array is created and then the slice reference is returned.
@@ -158,6 +158,20 @@ func main() {
 ```output{ lineNos=false }
 [0 1 2 3]
 [6 7]
+```
+
+When we create an empty slice, we cannot assign values to it using indexing.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var slice []int // create empty slice
+	fmt.Println(slice)
+	slice[0] = 1 // panic: runtime error: index out of range [0] with length 0
+}
 ```
 
 ## Slice Indexing
