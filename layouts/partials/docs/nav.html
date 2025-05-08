@@ -18,9 +18,11 @@
   <ul class="list-unstyled mb-2 w-100">
   {{- $expand := default false .page.Site.Params.docs.nav.expand -}}
       {{/*  {{- $pages := sort (where $section.Pages "Params.navWeight" "ne" nil) "Params.navWeight" "desc" -}}  */}}
+      {{/*  {{- $pages := sort ($section.Pages) "Params.navWeight" "asc" -}}  */}}
       <!-- sort by weight and then by date instead of navweight above -->
-      {{- $pages := $section.Pages.ByWeight.ByDate -}}
-      {{- $pages = union $pages (sort $section.Pages "LinkTitle") -}}
+      {{- $weightedPages := sort (where $section.Pages "Params.weight" "ne" nil) "Params.weight" "asc" -}}
+      {{- $unweightedPages := sort (where $section.Pages "Params.weight" nil) "Date" "asc" -}}
+      {{- $pages := $unweightedPages | union $weightedPages -}}
       {{- range $pages -}}
           {{- if .IsSection -}}
           {{- $sectionId := printf "nav-%s" .File.UniqueID -}}

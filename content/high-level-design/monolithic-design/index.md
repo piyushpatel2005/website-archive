@@ -2,6 +2,7 @@
 # type: docs 
 title: Monolithic Design
 date: 2025-05-05T18:14:08-04:00
+weight: 1000
 featured: false
 draft: false
 comment: true
