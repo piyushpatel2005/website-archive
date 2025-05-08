@@ -1,0 +1,20 @@
+<div class="container">
+    {{- if not .IsHome }}
+      {{- partial "breadcrumb" . }}
+      <!-- {{- partialCached "sections" . .Section }} -->
+    {{- end }}
+    {{- partial "author/profile" . }}
+    {{- partial "hooks/list-begin" . }}
+    <div class="posts mb-4">
+    {{/*  {{- $pages := sort (where .Pages "Params.navWeight" "ne" nil) "Params.navWeight" "desc" -}}  */}}
+    {{/*  {{- $pages = $pages.ByWeight.ByDate -}}  */}}
+    {{/*  {{- $pages :=  (sort (where .Pages "Params.navWeight" "ne" nil)  "Params.navWeight").Pages.ByWeight.ByDate -}}  */}}
+    <!-- sort by weight and then by date instead of navweight above -->
+    {{- $weightedPages := sort (where .Pages "Params.weight" "ne" nil) "Params.weight" "asc" -}}
+    {{- $unweightedPages := sort (where .Pages "Params.weight" nil) "Date" "asc" -}}
+    {{- $pages := $unweightedPages | union $weightedPages -}}
+    {{- range $index, $page := $pages }}
+      {{- partial "tutorial-list-item" (dict "Index" $index "Page" $page "PinnedPosts" ($.Scratch.Get "pinnedPosts")) }}
+    {{- end }}
+    </div>
+  </div>

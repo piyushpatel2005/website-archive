@@ -24,7 +24,7 @@ Now, let's go into the installation process.
 5. Check the box next to it and click OK.
 6. Restart your computer when prompted.
 
-![Turn Windows Features on or off](./turn-windows-feature.JPG "Turn on Windows feature for WSL")
+![Turn Windows Features on or off](turn-windows-feature.JPG "Turn on Windows feature for WSL")
 
 ## Step 2: Update to WSL2
 By default, WSL installs as version 1 (WSL1). To upgrade to WSL2:

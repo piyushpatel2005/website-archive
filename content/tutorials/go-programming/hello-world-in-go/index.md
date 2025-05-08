@@ -48,9 +48,7 @@ go run main.go
 Hello World
 ```
 
-{{< admonition note >}}
-In above execution, `$` symbol is used as a prompt representation. You do not need to actually write that. Actual command is `go run main.go` but `$` is there only for representation.
-{{< /admonition >}}
+> In above execution, `$` symbol is used as a prompt representation. You do not need to actually write that. Actual command is `go run main.go` but `$` is there only for representation.
 
 ## Experiment with Code
 

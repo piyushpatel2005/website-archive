@@ -71,9 +71,7 @@ Hello John
 Hello Rebecca
 ```
 
-{{< admonition >}}
-**Parameters** are the names we use in the function definition. When function is called, what we pass in that function call is called **arguments**. These two look very similar, but different names might be confusing.
-{{< /admonition >}}
+> **Parameters** are the names we use in the function definition. When function is called, what we pass in that function call is called **arguments**. These two look very similar, but different names might be confusing.
 
 ## Doc String
 

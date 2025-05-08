@@ -25,9 +25,7 @@ This kind of operators allow us to perform arithmetic operations in Python. Thes
 
 The easiest way to experiment with these operators is to use Python REPL (Read Evaluate Print Loop). On Command prompt, just type `python` and your prompt should change like below.
 
-{{< admonition "note" >}}
-Please, note that in REPL, it outputs the value directly without using any method like `print`. In actual code, we will have to use `print` function in order to print the output of the arithmetic operations.
-{{< /admonition >}}
+> Please, note that in REPL, it outputs the value directly without using any method like `print`. In actual code, we will have to use `print` function in order to print the output of the arithmetic operations.
 
 ```shell{ .show-prompt lineNos=false }
 python

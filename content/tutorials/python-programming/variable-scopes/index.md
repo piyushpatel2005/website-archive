@@ -75,9 +75,7 @@ Jessica
 Jessica
 ```
 
-{{< admonition tip >}}
-We should avoid modifying global variables inside a function to avoid confusion. This can result in bugs which can be difficult to trace.
-{{< /admonition >}}
+> We should avoid modifying global variables inside a function to avoid confusion. This can result in bugs which can be difficult to trace.
 
 ## Block Level Variables
 

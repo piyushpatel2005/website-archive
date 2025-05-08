@@ -10,9 +10,7 @@ A shell is basically a command language interpreter which translates commands pa
 
 The shell is named so because it is the outermost layer around the OS kernel. It keeps user-system interaction by getting user input from command line interface and then handling output from the underlying operating system.
 
-{{< admonition "note" >}}
-In Windows operating system, we have command prompt which is different from Bash or Shell. This tutorial is targeted at UNIX style shell which are present in all Linux distributions and MacOS.
-{{</ admonition >}}
+> In Windows operating system, we have command prompt which is different from Bash or Shell. This tutorial is targeted at UNIX style shell which are present in all Linux distributions and MacOS.
 
 We can interact with shell to perform following operations and many more. Almost every task can be performed from shell.
 
